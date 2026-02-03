@@ -2,21 +2,42 @@ import case1 from "../img/projeto1.png"
 import case1Dois from "../img/projeto1.2.png"
 import case1Tres from "../img/projeto1.3.png"
 
+import case2 from "../img/projeto2.png"
+import case2Dois from "../img/projeto2.2.png"
+import case2Tres from "../img/projeto2.3.png"
+
 export default function PriParte(){
 
 return(
 
     <body className="p-5 flex flex-col justify-center items-center">
 
-        <div className="w-85 mt-10 a ">
+        <div className="w-85 mt-10 ">
             <div className="tudo">
                 <section className="hero">
-                     <div class="slider gap-3">
-                        <img src={case1} />
-                        <img src={case1Dois}/>
-                        <img src={case1Tres} />
-                    </div>
-                    <div className="content">
+  <div className="sliders-bg gap-2">
+    <div className="slider-row">
+      <div className="slider gap-2">
+        <img src={case1} />
+        <img src={case1Dois} />
+        <img src={case1Tres} />
+        <img src={case1} />
+      </div>
+    </div>
+
+    <div className="slider-row">
+      <div className="slider reverse gap-2">
+        <img src={case2} />
+        <img src={case2Dois} />
+        <img src={case2Tres} />
+        <img src={case2} />
+      </div>
+    </div>
+  </div>
+
+  <div className="a"></div>
+
+  <div className="content mt-30">
                         <h1 className="text-2xl font-medium
                         ">Construa uma marca que seja <p className="bg-white text-black w-68 font-bold">reconhecida e lembrada</p></h1>
                         <h2 className="my-3 text-lg font-normal ">Desenvolvemos identidades visuais pensadas para posicionar sua empresa com clareza, autoridade e consistência no mercado.</h2>
@@ -29,7 +50,8 @@ return(
                             </a>
                         </div>
                     </div>
-                </section>
+</section>
+ 
             </div>
 
             <section className="mt-20">
