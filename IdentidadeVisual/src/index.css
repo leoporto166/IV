@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Akira";
+  src: url("/AkiraExpanded-Demo.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

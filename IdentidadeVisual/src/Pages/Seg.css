@@ -1,0 +1,132 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(circle at top, #270233, #2d0b3f, #471363);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* FAROL */
+.farol {
+  width: 180px;
+  z-index: 2;
+  margin-top: -300px;
+}
+
+/* FEIXE DE LUZ */
+.feixe {
+  position: absolute;
+  top: -3%;
+  left: 49.4%;
+  width: 400px;
+  height: 479px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.13)
+  );
+
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: left center;
+
+  opacity: 0;
+  animation: feixe 4s ease-in-out forwards ;
+  z-index: 1;
+}
+
+.luz{
+
+    background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0)
+  );
+  position: absolute;
+
+  top: 65.6%;
+  width: 450px;
+  height: 500px;
+  opacity: 0;
+
+  transform-origin: left center;
+  animation: luz 1s ease-out forwards;
+  animation-delay: 1.8s; 
+}
+
+/* TEXTO */
+.texto {
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: aparecer 1.2s ease-out forwards;
+  animation-delay: 1.6s; 
+}
+.texto h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font: bolder;
+}
+
+.texto h2 {
+  font-size: 1.8rem;
+  color: #a255eb;
+  font-weight: bold;
+}
+
+.texto span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ANIMAÇÕES */
+@keyframes feixe {
+  0% {
+    transform: rotate(-15deg);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+}
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes luz {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
