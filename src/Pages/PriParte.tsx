@@ -10,9 +10,6 @@ import case2Tres from "../img/projeto2.3.png"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
-import "swiper/css"
-import "swiper/css/pagination"
-
 import './Pri.css'
 
 export default function PriParte(){

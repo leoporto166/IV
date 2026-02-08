@@ -1,0 +1,260 @@
+.hero {
+  position: relative;
+  background: radial-gradient(circle at top, #270233, #2d0b3f, #471363);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: visible;
+  
+}
+
+
+/* FAROL */
+.farol {
+  width: 180px;
+  z-index: 2;
+  margin-top: -40%;
+  left: 50%;
+}
+
+/* FEIXE DE LUZ */
+
+@media (min-width: 400px) and (max-width: 430px) {
+  .feixe {
+  position: absolute;
+  top: -20.5vh;
+  left: 49.4%;
+  width: 170%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.808),
+    rgba(255, 255, 255, 0.411),
+    rgba(255, 255, 255, 0.192),
+    rgba(255, 255, 255, 0)
+  );
+
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: left center;
+
+  opacity: 0;
+  animation: feixe 4s ease-in-out forwards ;
+  z-index: 1;
+}  
+
+}
+
+@media (min-width: 431px) and (max-width: 470px) {
+  .feixe {
+  position: absolute;
+  top: -21vh;
+  left: 49.4%;
+  width: 170%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.808),
+    rgba(255, 255, 255, 0.411),
+    rgba(255, 255, 255, 0.192),
+    rgba(255, 255, 255, 0)
+  );
+
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: left center;
+
+  opacity: 0;
+  animation: feixe 4s ease-in-out forwards ;
+  z-index: 1;
+}  
+
+}
+
+@media (min-width: 470px) and (max-width: 540px) {
+  .feixe {
+  position: absolute;
+  top: -23vh;
+  left: 49.4%;
+  width: 150%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.808),
+    rgba(255, 255, 255, 0.411),
+    rgba(255, 255, 255, 0.192),
+    rgba(255, 255, 255, 0)
+  );
+
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: left center;
+
+  opacity: 0;
+  animation: feixe 4s ease-in-out forwards ;
+  z-index: 1;
+}  
+
+}
+
+@media (min-width: 540px) and (max-width: 610px) {
+  .feixe {
+  position: absolute;
+  top: -23.6vh;
+  left: 50%;
+  width: 140%;
+  height: 98%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.808),
+    rgba(255, 255, 255, 0.411),
+    rgba(255, 255, 255, 0.192),
+    rgba(255, 255, 255, 0)
+  );
+
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: left center;
+
+  opacity: 0;
+  animation: feixe 4s ease-in-out forwards ;
+  z-index: 1;
+}  
+
+}
+
+.texto {
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: aparecer 1.2s ease-out forwards;
+  animation-delay: 1.6s; 
+}
+.texto h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font: bolder;
+}
+
+.texto h2 {
+  font-size: 1.8rem;
+  color: #a255eb;
+  font-weight: bold;
+}
+
+.texto span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ANIMAÇÕES */
+@keyframes feixe {
+  0% {
+    transform: rotate(-15deg);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+}
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes luz {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  opacity: 0;
+  animation: aparecer 1.2s ease-out forwards;
+  animation-delay: 1.6s;
+}
+
+.part1{
+  margin-top: 50px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-text{
+  animation: textColor 2s ease-out forwards;
+  animation-delay: 5s;
+  color: black;
+}
+
+.animation-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #1e0427;
+  margin-top: 30px;
+  width: 330px;
+  height: 40px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+
+  animation: bgGrow 2s ease-out forwards;
+  animation-delay: 5s;
+}
+
+.text{
+
+  color: #290735;
+
+}
+
+@keyframes textColor {
+  to {
+    color: white;
+  }
+}
+
+/* FUNDO */
+@keyframes bgGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
