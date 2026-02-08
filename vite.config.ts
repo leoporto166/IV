@@ -9,5 +9,5 @@ export default defineConfig({
     tailwindcss(),
 
   ],
-   base: '/NOME_DO_REPO/'
+   base: '/IV/'
 })
