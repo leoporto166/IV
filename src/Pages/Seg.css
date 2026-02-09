@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  overflow: visible;
+  overflow-x: hidden;
   
 }
 
@@ -21,7 +21,33 @@
 
 /* FEIXE DE LUZ */
 
-@media (min-width: 400px) and (max-width: 430px) {
+@media (min-width: 340px) and (max-width: 395px) {
+  .feixe {
+  position: absolute;
+  top: -25vh;
+  left: 49.4%;
+  width: 170%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.808),
+    rgba(255, 255, 255, 0.411),
+    rgba(255, 255, 255, 0.192),
+    rgba(255, 255, 255, 0)
+  );
+
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: left center;
+
+  opacity: 0;
+  animation: feixe 4s ease-in-out forwards ;
+  z-index: 1;
+}  
+
+}
+
+@media (min-width: 395px) and (max-width: 430px) {
   .feixe {
   position: absolute;
   top: -20.5vh;
@@ -198,7 +224,7 @@
 }
 
 .hero2{
-  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,7 +236,6 @@
 
 .part1{
   margin-top: 50px;
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,7 +244,7 @@
 
 .animation-text{
   animation: textColor 2s ease-out forwards;
-  animation-delay: 5s;
+  animation-delay: 3s;
   color: black;
 }
 
@@ -228,7 +253,7 @@
   position: absolute;
   inset: 0;
   background-color: #1e0427;
-  margin-top: 30px;
+  margin-top: 80px;
   width: 330px;
   height: 40px;
 
@@ -237,7 +262,7 @@
   z-index: -1;
 
   animation: bgGrow 2s ease-out forwards;
-  animation-delay: 5s;
+  animation-delay: 3s;
 }
 
 .text{
