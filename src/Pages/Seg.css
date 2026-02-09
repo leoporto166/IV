@@ -245,14 +245,14 @@
 .animation-text{
   animation: textColor 2s ease-out forwards;
   animation-delay: 3s;
-  color: black;
+  color: rgb(255, 253, 253);
 }
 
 .animation-text::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #1e0427;
+  background-color: #8c19b3;
   margin-top: 80px;
   width: 330px;
   height: 40px;
@@ -265,9 +265,17 @@
   animation-delay: 3s;
 }
 
+.button{
+
+  background: linear-gradient(to right, rgb(98, 7, 121), rgb(166, 26, 201), rgb(208, 76, 241));
+
+  color: white;
+
+}
+
 .text{
 
-  color: #290735;
+  color: #ffffff;
 
 }
 

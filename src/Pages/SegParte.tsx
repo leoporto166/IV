@@ -18,13 +18,13 @@ export default function SegParte() {
         </div>
       </section>
 
-          <section className="hero2 bg-white rounded-t-2xl mt-[-20px]">
+          <section className="hero2 bg-black rounded-t-2xl mt-[-20px]">
             <div className="part1">
-              <h1 className="text-2xl font-medium text-black
+              <h1 className="text-2xl font-medium text-white 
               ">Construa uma marca que seja <p className=" w-68 font-bold animation-text ">reconhecida e lembrada</p></h1>
               <h2 className="my-3 text-lg font-semibold text mx-13">Desenvolvemos identidades visuais pensadas para posicionar sua empresa com clareza, autoridade e consistência no mercado.</h2>
               <div className="flex justify-center items-center">
-                  <a className="bg-linear-to-r from-green-800 via-green-600 to-green-400 animate-gradient p-3 text-xl font-bold rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 "
+                  <a className="animate-gradient p-3 text-xl font-bold rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button"
                   href="https://wa.me/62982616305" target="_blank"
                   >
                       COMEÇAR MEU PROJETO
