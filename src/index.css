@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+
 @font-face {
   font-family: "Akira";
-  src: url("/AkiraExpanded-Demo.otf") format("opentype");
+  src: url("./font/AkiraExpanded.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neulis";
+  src: url("./font/Neulis.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
