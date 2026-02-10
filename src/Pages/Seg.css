@@ -443,12 +443,84 @@
 /*Parte Artes*/
 
 .part2{
-   background: linear-gradient(to bottom, #7C5E8D, #270233, #2d0b3f, #471363);
-   margin-top: -10px;
+   height: 85vh;
 }
 
 .buttonEscuro{
 
   background: linear-gradient(to right, #7C5E8D, #9d37d4, #ae4de2);
 
+}
+
+/* BASE DAS LUZES */
+.luz-global {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease, filter 0.8s ease;
+  z-index: 999;
+}
+
+.luz-top,
+.luz-bottom {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* TOPO */
+.luz-top {
+  top: -35%;
+  height: 70%;
+}
+
+
+/* BOTTOM */
+.luz-bottom {
+  bottom: -35%;
+  height: 70%;
+}
+
+body.luz-slide-1 .luz-top {
+  background: linear-gradient(
+    to bottom,
+    rgb(10, 255, 1),
+    transparent 70%
+  );
+}
+
+
+body.luz-slide-1 .luz-bottom {
+  background: linear-gradient(
+    to top,
+    rgb(10, 255, 1),
+    transparent 70%
+  );
+}
+
+body.luz-slide-2 .luz-top {
+  background: linear-gradient(
+    to bottom,
+    rgb(45, 46, 45),
+    transparent 70%
+  );
+}
+
+
+body.luz-slide-2 .luz-bottom {
+  background: linear-gradient(
+    to top,
+    rgb(45, 46, 45),
+    transparent 70%
+  );
+}
+
+body.luz-topo-ativa .luz-top {
+  opacity: 1;
+}
+
+
+body.luz-bottom-ativa .luz-bottom {
+  opacity: 1;
 }

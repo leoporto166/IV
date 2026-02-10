@@ -6,16 +6,89 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
 import case1 from "../img/projeto1.png"
-import case1Dois from "../img/projeto1.2.png"
-import case1Tres from "../img/projeto1.3.png"
+import case1Dois from "../img/upzion2.jpeg"
+import case1Tres from "../img/upzion1.jpeg"
 
-import case2 from "../img/projeto2.png"
-import case2Dois from "../img/projeto2.2.png"
-import case2Tres from "../img/projeto2.3.png"
+import case2 from "../img/triad.png"
+import case2Dois from "../img/triad2.png"
+import case2Tres from "../img/triad1.png"
+import { useEffect, useRef, useState } from "react";
+
+
 
 export default function SegParte() {
+const [luzPermitida, setLuzPermitida] = useState(false);
+const secaoRef = useRef<HTMLElement | null>(null);
+const swiperRef = useRef< null>(null);
+const [luzTopoAtiva, setLuzTopoAtiva] = useState(false);
+const [luzBottomAtiva, setLuzBottomAtiva] = useState(false);
+
+useEffect(() => {
+  if (!secaoRef.current) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      const ratio = entry.intersectionRatio;
+
+      // controle geral
+      setLuzPermitida(entry.isIntersecting);
+
+      // TOPO: aparece cedo
+      setLuzTopoAtiva(ratio > 0.35);
+
+      // BOTTOM: só quando está bem dentro
+      setLuzBottomAtiva(ratio > 0.100);
+    },
+    {
+      threshold: [0, 0.35, 0.100, 1],
+    }
+  );
+
+  observer.observe(secaoRef.current);
+
+  return () => observer.disconnect();
+}, []);
+
+
+useEffect(() => {
+  document.body.classList.toggle("luz-topo-ativa", luzTopoAtiva);
+  document.body.classList.toggle("luz-bottom-ativa", luzBottomAtiva);
+}, [luzTopoAtiva, luzBottomAtiva]);
+
+
+const ativarLuz = (index: number) => {
+  if (!luzPermitida) return;
+
+  document.body.className = document.body.className
+    .replace(/luz-slide-\d+/g, "")
+    .trim();
+
+  document.body.classList.add(`luz-slide-${index + 1}`);
+};
+
+
+useEffect(() => {
+  if (!luzPermitida) return;
+  if (!swiperRef.current) return;
+
+  ativarLuz(swiperRef.current.activeIndex);
+}, [luzPermitida]);
+
+
+
+useEffect(() => {
+  if (!luzPermitida) {
+    document.body.className = document.body.className
+      .replace(/luz-slide-\d+/g, "")
+      .trim();
+  }
+}, [luzPermitida]);
+
   return (
     <body>
+        <div className="luz-global luz-top"></div>
+        <div className="luz-global luz-bottom"></div>
+
       <section className="hero">
         <div className="farol-wrapper">
             <img className="farol" src={farol} />
@@ -67,61 +140,104 @@ export default function SegParte() {
 
           </section>
 
-          <section className="part2  p-2">
-            <h1 className="text-2xl font-bold text-white
-            mt-6">Nossas marcas de sucesso</h1>
-            <div className="linha"></div>
+          <section className="part2  p-2 textp1" ref={secaoRef}>
+            <h1 className="akira text-lg font-semibold text-black 
+                
+                ">Nossas marcas e sucesso</h1>
+                <div className="linhaBranco"></div>
             <div className="flex flex-col justify-center items-center">
               <Swiper
-                          pagination={{ clickable: true }}
-                          modules={[Navigation, Pagination, Autoplay]}
-                          spaceBetween={20}
-                          slidesPerView={1}
-            
-                          className="w-12/12 mt-10 h-[520px]"
-                          ><style>
-                          {`
-            
-                          .swiper-pagination-bullet {
-                              background-color: #000000 !important; /* azul (Tailwind blue-500) */
-                              opacity: 1;
-                              }
-                              .swiper-pagination-bullet-active {
-                              background-color: #FFFF !important; /* verde (Tailwind green-500) */
-                              }
-                          `}
-                      </style>
+                pagination={{ clickable: true }}
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={1}
+                onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
+                onSlideChange={(swiper) => ativarLuz(swiper.activeIndex)}
+                className="w-full mt-10 h-[500px]"
+
+
+                ><style>
+                    {`
+        
+                        .swiper-pagination-bullet {
+                            background-color: #000000 !important; /* azul (Tailwind blue-500) */
+                            opacity: 1;
+                            }
+                            .swiper-pagination-bullet-active {
+                            background-color: #E0E4DF !important; /* verde (Tailwind green-500) */
+                            }
+                        `}
+                    </style>
             
             
                           <SwiperSlide>
-                              <div className="flex gap-2 mb-2">
+                              <div className="flex gap-2 mb-2 ">
             
-                                  <img src={case1} className="w-50 rounded-4xl shadow-black/20 shadow-lg h-50"></img>
-                                  <img src={case1Dois} className="w-50 rounded-4xl shadow-black/20 shadow-lg h-50"></img>
+                                <div
+                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case1})` }}
+                                >
+                                    
+                                </div>
+                                                                                                       <div
+                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case1Dois})` }}
+                                >
+                                    
+                                </div>
                               </div>
-                              <img src={case1Tres} className="w-full rounded-4xl shadow-black/20 shadow-lg"></img>
+                              <div
+                                className="w-full aspect-[16/10] rounded-2xl shadow-black/20 shadow-lg bg-left bg-cover"
+                                style={{ backgroundImage: `url(${case1Tres})` }}
+                                >
+                                    
+                            </div>
+
+                            <div className="mt-5">
+
+                                <h2 className="akira text-lg font-semibold text-black 
+                                ">Upzion</h2>
+                                <p>TEXXXXXTO</p>
+
+                            </div>
                           </SwiperSlide>
 
-                          <SwiperSlide>
-                              <div className="flex gap-2 mb-2">
+                            <SwiperSlide>
+                              <div className="flex gap-2 mb-2 ">
             
-                                  <img src={case2} className="w-50 rounded-4xl shadow-black/20 shadow-lg h-50"></img>
-                                  <img src={case2Dois} className="w-50 rounded-4xl shadow-black/20 shadow-lg h-50"></img>
+                                <div
+                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case2})` }}
+                                >
+                                    
+                                </div>
+                                                                                                       <div
+                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case2Dois})` }}
+                                >
+                                    
+                                </div>
                               </div>
-                              <img src={case2Tres} className="w-full h-68 rounded-4xl shadow-black/20 shadow-lg"></img>
+                              <div
+                                className="w-full aspect-[16/10] rounded-4xl shadow-black/20 shadow-lg bg-left bg-cover"
+                                style={{ backgroundImage: `url(${case2Tres})` }}
+                                >
+                                    
+                                </div>
+
+
+                                <div>
+                                    <h2 className="akira text-lg font-semibold text-black 
+                                    ">Triad</h2>
+                                    <p>TEXXXXXTO</p>
+                                </div>
                           </SwiperSlide>
             
             
             
                       </Swiper>
-                      <div className="flex justify-center items-center pb-10">
-                              <a className=" animate-gradient p-3 text-xl font-bold rounded-2xl mt-2 b-2 shadow-black/10 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button"
-                              href="https://wa.me/62982616305" target="_blank"
-                              >
-                                  COMEÇAR MEU PROJETO
-            
-                              </a>
-                      </div>
             </div>
           </section>
     </body>
