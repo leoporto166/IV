@@ -246,14 +246,6 @@
   animation-delay: 1.6s; 
 }
 
-.akira{
-  font-family: "Akira", "sans-serif";
-}
-
-.nelius{
-  font-family: "Neulis", "sans-serif";
-
-}
 
 .texto h1 {
   font-size: 2.5rem;
@@ -369,9 +361,9 @@
   position: absolute;
   inset: 0;
   background-color: #8c19b3;
-  margin-top: 104px;
-  width: 330px;
-  height: 60px;
+  margin-top: 76px;
+  width: 340px;
+  height: 30px;
 
   transform: scaleX(0);
   transform-origin: left;
@@ -395,7 +387,7 @@
   .linha{
 
     margin-top: 8px;
-    width: 335px;
+    width: 70%;
     height: 4px;
     background: linear-gradient(to right, white, white, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), white ,white);
 
@@ -404,7 +396,7 @@
   .linhaBranco{
 
     margin-top: 8px;
-    width: 70%;
+    width: 75%;
     height: 4px;
     background: linear-gradient(to right, rgb(55, 1, 80), rgb(55, 1, 80), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(55, 1, 80) ,rgb(55, 1, 80));
 
@@ -423,6 +415,7 @@
 .text{
 
   color: #000000;
+  font-size: 13px;
 
 }
 
@@ -512,6 +505,23 @@ body.luz-slide-2 .luz-bottom {
   background: linear-gradient(
     to top,
     rgb(45, 46, 45),
+    transparent 70%
+  );
+}
+
+body.luz-slide-3 .luz-top {
+  background: linear-gradient(
+    to bottom,
+    #468158,
+    transparent 70%
+  );
+}
+
+
+body.luz-slide-3 .luz-bottom {
+  background: linear-gradient(
+    to top,
+    #49865b,
     transparent 70%
   );
 }

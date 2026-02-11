@@ -4,6 +4,7 @@ import Logo from "../img/logoPorto2.png"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
+import type { Swiper as SwiperType } from "swiper";
 
 import case1 from "../img/projeto1.png"
 import case1Dois from "../img/upzion2.jpeg"
@@ -12,6 +13,11 @@ import case1Tres from "../img/upzion1.jpeg"
 import case2 from "../img/triad.png"
 import case2Dois from "../img/triad2.png"
 import case2Tres from "../img/triad1.png"
+
+import case3 from "../img/conne3.jpeg"
+import case3Dois from "../img/conne1.jpeg"
+import case3Tres from "../img/conne2.jpeg"
+
 import { useEffect, useRef, useState } from "react";
 
 
@@ -19,7 +25,7 @@ import { useEffect, useRef, useState } from "react";
 export default function SegParte() {
 const [luzPermitida, setLuzPermitida] = useState(false);
 const secaoRef = useRef<HTMLElement | null>(null);
-const swiperRef = useRef< null>(null);
+const swiperRef = useRef<SwiperType | null>(null);
 const [luzTopoAtiva, setLuzTopoAtiva] = useState(false);
 const [luzBottomAtiva, setLuzBottomAtiva] = useState(false);
 
@@ -97,17 +103,17 @@ useEffect(() => {
         
         <div className="texto flex flex-col justify-center items-center">
         <img src={Logo} alt="Logo Marca" className=" mt-[-210px] w-60" />
-          <h2 className="akira mt-[-80px] text-[15px]">Crie sua logo marca</h2>
-          <p className="nelius font-semibold text-sm">Ilumine sua marca</p>
+          <h2 className="nelius mt-[-80px] text-[20px]">Crie sua logo marca</h2>
+          <p className="luf text-sm">Ilumine sua marca</p>
 
         </div>
       </section>
 
           <section className="hero2 bg-white rounded-2xl mt-[-100px]">
             <div className="part1 ">
-              <h1 className="akira text-xl font-semibold text-black textp1 
-              ">Construa uma marca que seja <p className=" font-bold animation-text ">reconhecida e lembrada</p></h1>
-              <h2 className="font-semibold text textp1 description nelius">Desenvolvemos identidades visuais pensadas para posicionar sua empresa com clareza, autoridade e consistência no mercado.</h2>
+              <h1 className="nelius text-xl font-semibold text-black textp1 
+              ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
+              <h2 className="font-semibold text textp1 description luf">Desenvolvemos identidades visuais pensadas para posicionar sua empresa com clareza, autoridade e consistência no mercado.</h2>
               <div className="flex justify-center items-center">
                   <a className="animate-gradient p-3 text-xl font-bold rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button"
                   href="https://wa.me/62982616305" target="_blank"
@@ -119,12 +125,12 @@ useEffect(() => {
 
             <section className="part1 ">
 
-                <h1 className="akira text-lg font-semibold text-black 
+                <h1 className="nelius text-xl font-semibold text-black 
                  textp1
                 ">Tenha uma lingugaem visual que <span className="font-bold">realmente venda.</span> </h1>
                 <div className="linhaBranco textp1"></div>
 
-                <h2 className="font-semibold text textp1 description nelius">Deixe de perder clientes por uma imagem confusa ou pouco alinhada com seu propósito. Nós da Porto vamos fazer isso para você. </h2>
+                <h2 className="font-semibold text textp1 description luf">Deixe de perder clientes por uma imagem confusa ou pouco alinhada com seu propósito. Nós da Porto vamos fazer isso para você. </h2>
 
                 <div className="flex justify-center items-center">
                     <a className=" animate-gradient p-3 text-xl font-bold rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button"
@@ -140,12 +146,12 @@ useEffect(() => {
 
           </section>
 
-          <section className="part2  p-2 textp1" ref={secaoRef}>
-            <h1 className="akira text-lg font-semibold text-black 
+          <section className="part2  p-2 " ref={secaoRef}>
+            <h1 className="nelius text-xl font-semibold text-black 
                 
-                ">Nossas marcas e sucesso</h1>
-                <div className="linhaBranco"></div>
-            <div className="flex flex-col justify-center items-center">
+                textp1">Nossas marcas de sucesso</h1>
+                <div className="textp1 linhaBranco"></div>
+            <div className="flex flex-col justify-center items-center textp1">
               <Swiper
                 pagination={{ clickable: true }}
                 modules={[Navigation, Pagination, Autoplay]}
@@ -155,7 +161,7 @@ useEffect(() => {
                     swiperRef.current = swiper;
                 }}
                 onSlideChange={(swiper) => ativarLuz(swiper.activeIndex)}
-                className="w-full mt-10 h-[500px]"
+                className=" w-full mt-10 h-[500px]"
 
 
                 ><style>
@@ -197,7 +203,7 @@ useEffect(() => {
 
                             <div className="mt-5">
 
-                                <h2 className="akira text-lg font-semibold text-black 
+                                <h2 className="nelius text-lg font-semibold text-black 
                                 ">Upzion</h2>
                                 <p>TEXXXXXTO</p>
 
@@ -229,9 +235,42 @@ useEffect(() => {
 
 
                                 <div>
-                                    <h2 className="akira text-lg font-semibold text-black 
+                                    <h2 className="nelius text-lg font-semibold text-black 
                                     ">Triad</h2>
-                                    <p>TEXXXXXTO</p>
+                                    <p className="luf text">TEXXXXXTO</p>
+                                </div>
+                          </SwiperSlide>
+
+
+                                                    
+                            <SwiperSlide>
+                              <div className="flex gap-2 mb-2 ">
+            
+                                <div
+                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case3})` }}
+                                >
+                                    
+                                </div>
+                                                                                                       <div
+                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case3Dois})` }}
+                                >
+                                    
+                                </div>
+                              </div>
+                              <div
+                                className="w-full aspect-[16/10] rounded-4xl shadow-black/20 shadow-lg bg-left bg-cover"
+                                style={{ backgroundImage: `url(${case3Tres})` }}
+                                >
+                                    
+                                </div>
+
+
+                                <div>
+                                    <h2 className="nelius text-lg font-semibold text-black 
+                                    ">Conexax</h2>
+                                    <p className="luf text">TEXXXXXTO</p>
                                 </div>
                           </SwiperSlide>
             
