@@ -18,8 +18,11 @@ import case3 from "../img/conne3.jpeg"
 import case3Dois from "../img/conne1.jpeg"
 import case3Tres from "../img/conne2.jpeg"
 
+import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 
+import "./stars.css"
+import lucas from "../img/Lucas.jpg"
 
 
 export default function SegParte() {
@@ -28,6 +31,28 @@ const secaoRef = useRef<HTMLElement | null>(null);
 const swiperRef = useRef<SwiperType | null>(null);
 const [luzTopoAtiva, setLuzTopoAtiva] = useState(false);
 const [luzBottomAtiva, setLuzBottomAtiva] = useState(false);
+const [contagem, setContagem]  = useState(0)
+const [start, setStart] = useState(false)
+
+useEffect(() => {
+  if (!start) return
+
+  let value = 0
+
+  const interval = setInterval(() => {
+
+    value += 5
+    setContagem(value)
+
+    if(value >= 100){
+      clearInterval(interval)
+    } 
+
+  }, 80)
+
+  return () => clearInterval(interval)
+
+}, [start])
 
 useEffect(() => {
   if (!secaoRef.current) return;
@@ -43,10 +68,10 @@ useEffect(() => {
       setLuzTopoAtiva(ratio > 0.35);
 
       // BOTTOM: só quando está bem dentro
-      setLuzBottomAtiva(ratio > 0.100);
+      setLuzBottomAtiva(ratio > 0.80);
     },
     {
-      threshold: [0, 0.35, 0.100, 1],
+      threshold: [0, 0.35, 0.80, 1],
     }
   );
 
@@ -95,7 +120,7 @@ useEffect(() => {
         <div className="luz-global luz-top"></div>
         <div className="luz-global luz-bottom"></div>
 
-      <section className="hero">
+        <section className="hero">
         <div className="farol-wrapper">
             <img className="farol" src={farol} />
             <div className="feixe"></div>
@@ -107,9 +132,9 @@ useEffect(() => {
           <p className="luf text-sm">Ilumine sua marca</p>
 
         </div>
-      </section>
+        </section>
 
-          <section className="hero2 bg-white rounded-2xl mt-[-100px]">
+        <section className="hero2 bg-white rounded-2xl mt-[-100px]">
             <div className="part1 ">
               <h1 className="nelius text-xl font-semibold text-black textp1 
               ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
@@ -144,9 +169,9 @@ useEffect(() => {
           </section>
         
 
-          </section>
+        </section>
 
-          <section className="part2  p-2 " ref={secaoRef}>
+        <section className="part2  p-2 " ref={secaoRef}>
             <h1 className="nelius text-xl font-semibold text-black 
                 
                 textp1">Nossas marcas de sucesso</h1>
@@ -278,7 +303,106 @@ useEffect(() => {
             
                       </Swiper>
             </div>
-          </section>
+        </section>
+
+        <section className="hero3 flex justify-center relative mt-10 ceu"
+
+        >
+
+        <div className="stars stars-1"></div>
+        <div className="stars stars-2"></div>
+        <div className="stars stars-3"></div>
+
+
+            {/* Linha */}
+            <div className=" rounded-full bg-white linha"></div>
+
+            
+            <div className="">
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center "
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 0.5 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-6 h-6 bg-white rounded-full glow5"></div>
+              </motion.div>
+              
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a"
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 0.5 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex flex-col justify-end w-6/12 text-white px-2">
+                <div className='gap-2'>
+                  <h2 className='text-5xl font-medium nelius'>Quem somos?</h2>
+                  <p className='luf text-xl'>A Porto é um marca de identidade visual... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit provident quo delectus voluptas laboriosam recusandae eos neque labore porro ab. Voluptate perspiciatis commodi unde temporibus odit ducimus voluptatem debitis quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fuga quibusdam nemo voluptatibus ex eaque cum facilis ducimus ad fugit aspernatur mollitia dignissimos, officia voluptates eius delectus? Tenetur, inventore minima?</p>
+                </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="b">
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center b"
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 0.5 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-6 h-6 bg-white rounded-full glow5"></div>
+              </motion.div>
+              
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a b  items-end"
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 0.5 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex flex-col justify-start w-6/12 text-white pl-4">
+                <div className='gap-2'>
+                  <h2 className='text-5xl font-medium nelius'>CEO</h2>
+                  <img src={lucas} className="rounded-xl"></img>
+                  <p className='luf text-xl'>Nosso CEO... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit provident quo delectus voluptas laboriosam recusandae eos neque labore porro ab. Voluptate perspiciatis commodi unde temporibus odit ducimus voluptatem debitis quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fuga quibusdam nemo voluptatibus ex eaque cum facilis ducimus ad fugit aspernatur mollitia dignissimos, officia voluptates eius delectus? Tenetur, inventore minima?</p>
+                </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="">
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center ba"
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 0.5 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-6 h-6 bg-white rounded-full glow5"></div>
+              </motion.div>
+              
+              <motion.div
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a ba"
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 0.5 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true }}
+                onViewportEnter={() => setStart(true)}
+              >
+                <div className="flex flex-col justify-start w-6/12 text-white pl-4">
+                <div className='gap-2'>
+                  <h2 className='text-5xl font-medium nelius text-end mr-3'>+{contagem}</h2>
+                  <h2 className='luf text-2xl text-end mr-3'>Marcas confiam em nós</h2>
+                </div>
+                </div>
+              </motion.div>
+            </div>
+
+
+        </section>
     </body>
   );
 }

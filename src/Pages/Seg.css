@@ -9,6 +9,7 @@
   height: 100vh;
   overflow: hidden; 
   position: relative;
+  z-index: 10;
   
 }
 
@@ -325,7 +326,7 @@
  @media (min-width: 340px) and (max-width: 395px) {
  .hero2{
 
-  min-height: 115vh;
+  min-height: 105vh;
 
  }  
 
@@ -333,7 +334,7 @@
  @media (min-width: 396px) {
  .hero2{
 
-  min-height: 88vh;
+  min-height: 75vh;
 
  }  
 
@@ -533,4 +534,29 @@ body.luz-topo-ativa .luz-top {
 
 body.luz-bottom-ativa .luz-bottom {
   opacity: 1;
+}
+
+.hero3{
+  width: 100vw;
+  height: 150vh;
+
+}
+
+
+.linha{
+  width: 1px;
+   height: 150vh;
+}
+
+.a{
+  width: 180vw;
+  height: 100px;
+}
+
+.b{
+  margin-top: 63%;
+}
+
+.ba{
+  margin-top: 180%;
 }
