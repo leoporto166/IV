@@ -7,7 +7,7 @@ import Logo from "../img/logoPorto2.png"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
-import type { Swiper as SwiperType } from "swiper";
+import type { Swiper as SwiperClass } from "swiper";
 
 import case1 from "../img/projeto1.png"
 import case1Dois from "../img/upzion2.jpeg"
@@ -29,12 +29,14 @@ import lucas from "../img/Lucas.jpg"
 
 import { FiX } from "react-icons/fi";
 import { FiCheck } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
+
 
 
 export default function SegParte() {
 const [luzPermitida, setLuzPermitida] = useState(false);
 const secaoRef = useRef<HTMLElement | null>(null);
-const swiperRef = useRef<SwiperType | null>(null);
+const swiperRefs = useRef<(SwiperClass | null)[]>([]);
 const [luzTopoAtiva, setLuzTopoAtiva] = useState(false);
 const [luzBottomAtiva, setLuzBottomAtiva] = useState(false);
 const [contagem, setContagem]  = useState(0)
@@ -93,25 +95,19 @@ useEffect(() => {
 }, [luzTopoAtiva, luzBottomAtiva]);
 
 
-const ativarLuz = (index: number) => {
-  if (!luzPermitida) return;
+const ativarLuz = (swiperId: number, slide: number) => {
+  const container = document.querySelector(
+    `.swiper-wrapper-luz[data-swiper="${swiperId}"]`
+  );
 
-  document.body.className = document.body.className
+  if (!container) return;
+
+  container.className = container.className
     .replace(/luz-slide-\d+/g, "")
     .trim();
 
-  document.body.classList.add(`luz-slide-${index + 1}`);
+  container.classList.add(`luz-slide-${slide + 1}`);
 };
-
-
-useEffect(() => {
-  if (!luzPermitida) return;
-  if (!swiperRef.current) return;
-
-  ativarLuz(swiperRef.current.activeIndex);
-}, [luzPermitida]);
-
-
 
 useEffect(() => {
   if (!luzPermitida) {
@@ -119,6 +115,15 @@ useEffect(() => {
       .replace(/luz-slide-\d+/g, "")
       .trim();
   }
+}, [luzPermitida]);
+
+useEffect(() => {
+  if (!luzPermitida) return;
+
+  swiperRefs.current.forEach((swiper, index) => {
+    if (!swiper) return;
+    ativarLuz(index + 1, swiper.activeIndex);
+  });
 }, [luzPermitida]);
 
   return (
@@ -140,7 +145,7 @@ useEffect(() => {
         </div>
         </section>
 
-        <section className="hero2 bg-white rounded-2xl mt-[-100px]">
+        <section className="hero2 bg-white rounded-2xl mt-[-150px]">
             <div className="part1 ">
               <h1 className="nelius text-xl font-semibold text-black textp1 
               ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
@@ -178,21 +183,99 @@ useEffect(() => {
         </section>
 
         <section className="part2  p-2 " ref={secaoRef}>
-            <h1 className="nelius text-xl font-semibold text-black 
-                
-                textp1">Nossas marcas de sucesso</h1>
-                <div className="textp1 linhaBranco"></div>
-            <div className="flex flex-col justify-center items-center textp1">
+            <div className="flex flex-col justify-center items-center">
+              <Swiper
+                            
+                pagination={{ clickable: true }}
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={1}
+                onSwiper={(swiper) => {
+                  swiperRefs.current[0] = swiper;
+                }}
+                onSlideChange={(swiper) => {
+                  ativarLuz(1, swiper.activeIndex);
+                }}
+                className=" w-full mt-10 h-[500px] mb-[100px]"
+
+
+                ><style>
+                    {`
+        
+                        .swiper-pagination-bullet {
+                            background-color: #000000 !important; /* azul (Tailwind blue-500) */
+                            opacity: 1;
+                            }
+                            .swiper-pagination-bullet-active {
+                            background-color: #E0E4DF !important; /* verde (Tailwind green-500) */
+                            }
+                        `}
+                    </style>
+            
+              
+
+            
+                          <SwiperSlide>
+                              <div
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case1Tres})` }}
+                                >
+                                    
+                            </div>
+
+                            <div className="mt-5">
+
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
+                          </SwiperSlide>
+
+                          <SwiperSlide>
+                              <div
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case1Dois})` }}
+                                >
+                                    
+                            </div>
+
+                            <div className="mt-5">
+
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
+                          </SwiperSlide>
+
+                          <SwiperSlide>
+                              <div
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case1})` }}
+                                >
+                                    
+                            </div>
+
+                            <div className="mt-5">
+
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
+                          </SwiperSlide>
+            
+              </Swiper>
               <Swiper
                 pagination={{ clickable: true }}
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={20}
                 slidesPerView={1}
                 onSwiper={(swiper) => {
-                    swiperRef.current = swiper;
+                  swiperRefs.current[1] = swiper;
                 }}
-                onSlideChange={(swiper) => ativarLuz(swiper.activeIndex)}
-                className=" w-full mt-10 h-[500px]"
+                onSlideChange={(swiper) => {
+                  ativarLuz(2, swiper.activeIndex);
+                }}
+                className=" w-full mt-10 h-[500px] mb-[100px]"
 
 
                 ><style>
@@ -210,24 +293,9 @@ useEffect(() => {
             
             
                           <SwiperSlide>
-                              <div className="flex gap-2 mb-2 ">
-            
-                                <div
-                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
-                                style={{ backgroundImage: `url(${case1})` }}
-                                >
-                                    
-                                </div>
-                                                                                                       <div
-                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
-                                style={{ backgroundImage: `url(${case1Dois})` }}
-                                >
-                                    
-                                </div>
-                              </div>
                               <div
-                                className="w-full aspect-[16/10] rounded-2xl shadow-black/20 shadow-lg bg-left bg-cover"
-                                style={{ backgroundImage: `url(${case1Tres})` }}
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case2Tres})` }}
                                 >
                                     
                             </div>
@@ -236,78 +304,121 @@ useEffect(() => {
 
                                 <h2 className="nelius text-lg font-semibold text-black 
                                 ">Upzion</h2>
-                                <p>TEXXXXXTO</p>
 
                             </div>
                           </SwiperSlide>
 
-                            <SwiperSlide>
-                              <div className="flex gap-2 mb-2 ">
-            
-                                <div
-                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
-                                style={{ backgroundImage: `url(${case2})` }}
-                                >
-                                    
-                                </div>
-                                                                                                       <div
-                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
+                          <SwiperSlide>
+                              <div
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
                                 style={{ backgroundImage: `url(${case2Dois})` }}
                                 >
                                     
-                                </div>
-                              </div>
-                              <div
-                                className="w-full aspect-[16/10] rounded-4xl shadow-black/20 shadow-lg bg-left bg-cover"
-                                style={{ backgroundImage: `url(${case2Tres})` }}
-                                >
-                                    
-                                </div>
+                            </div>
 
+                            <div className="mt-5">
 
-                                <div>
-                                    <h2 className="nelius text-lg font-semibold text-black 
-                                    ">Triad</h2>
-                                    <p className="luf text">TEXXXXXTO</p>
-                                </div>
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
                           </SwiperSlide>
 
-
-                                                    
-                            <SwiperSlide>
-                              <div className="flex gap-2 mb-2 ">
-            
-                                <div
-                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
-                                style={{ backgroundImage: `url(${case3})` }}
-                                >
-                                    
-                                </div>
-                                                                                                       <div
-                                className="w-50 h-35 rounded-xl shadow-black/20 shadow-lg bg-center bg-cover"
-                                style={{ backgroundImage: `url(${case3Dois})` }}
-                                >
-                                    
-                                </div>
-                              </div>
+                          <SwiperSlide>
                               <div
-                                className="w-full aspect-[16/10] rounded-4xl shadow-black/20 shadow-lg bg-left bg-cover"
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case2})` }}
+                                >
+                                    
+                            </div>
+
+                            <div className="mt-5">
+
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
+                          </SwiperSlide>
+            
+              </Swiper>
+
+              <Swiper
+                pagination={{ clickable: true }}
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={1}
+                onSwiper={(swiper) => {
+                  swiperRefs.current[2] = swiper;
+                }}
+                onSlideChange={(swiper) => {
+                  ativarLuz(3, swiper.activeIndex);
+                }}
+                className=" w-full mt-10 h-[500px] mb-[100px]"
+
+
+                ><style>
+                    {`
+        
+                        .swiper-pagination-bullet {
+                            background-color: #000000 !important; /* azul (Tailwind blue-500) */
+                            opacity: 1;
+                            }
+                            .swiper-pagination-bullet-active {
+                            background-color: #E0E4DF !important; /* verde (Tailwind green-500) */
+                            }
+                        `}
+                    </style>
+            
+            
+                          <SwiperSlide>
+                              <div
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
                                 style={{ backgroundImage: `url(${case3Tres})` }}
                                 >
                                     
-                                </div>
+                            </div>
 
+                            <div className="mt-5">
 
-                                <div>
-                                    <h2 className="nelius text-lg font-semibold text-black 
-                                    ">Conexax</h2>
-                                    <p className="luf text">TEXXXXXTO</p>
-                                </div>
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
+                          </SwiperSlide>
+
+                          <SwiperSlide>
+                              <div
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case3Dois})` }}
+                                >
+                                    
+                            </div>
+
+                            <div className="mt-5">
+
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
+                          </SwiperSlide>
+
+                          <SwiperSlide>
+                              <div
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                style={{ backgroundImage: `url(${case3})` }}
+                                >
+                                    
+                            </div>
+
+                            <div className="mt-5">
+
+                                <h2 className="nelius text-lg font-semibold text-black 
+                                ">Upzion</h2>
+
+                            </div>
                           </SwiperSlide>
             
-            
-            
-                      </Swiper>
+              </Swiper>
             </div>
         </section>
 
@@ -568,141 +679,85 @@ useEffect(() => {
           
           <section className="hero4-2 rounded-t-2xl flex flex-wrap justify-center items-center">
 
-            <div className="w-full flex justify-center items-center">
-              <Swiper
-                  modules={[Pagination, Autoplay]}
-                  slidesPerView={1}
-                  spaceBetween = {0}
-                  navigation
-                  //autoplay = 5000
-                  breakpoints={{
-                    320: {
-                      slidesPerView: 1.3,
-                      spaceBetween: 33
-                    },
-                    640:{
-                      slidesPerView: 1.5,
-                      spaceBetween:20
-                    },
-                    641:{
-                      slidesPerView: 1.7
-              
-                    },
-                    760:{
-                      slidesPerView: 2.5
-                    },
-                    910:{
-                      slidesPerView: 2.8
-                    },
-                    1024:{
-                      slidesPerView: 3.2,
-                    },
-                    1250:{
-                      slidesPerView: 4,
-                    },
-                    1600:{
-                      slidesPerView: 5.2,
-                    }
-                  }} className="w-full"
-              >
-                <SwiperSlide className="px-2">
+            <div className="w-full flex justify-center items-center flex-col">
+
+                <div className="p-4">
                   <div className="serv rounded-2xl text-white">
                       <div className="flex flex-col text-start p-2">
                         <h1 className="luf text-xl font-bold mt-2">Criação de Marca</h1>
                       </div>
-                      <div className="p-2">
-                      <h2  className="flex gap-1 text-sm"> DE <p className="line-through text-gray-300"> R$ 700,00 </p> POR</h2>
-                      <div className="text-2xl font-bold">R$ 400,00</div>
+                      <div className="p-2 h-50">
                       <div className="luf">
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck> LOGOTIPO</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>  PALETA DE CORES</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>  Hieraquia de Texto</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Elementos Gráficos</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Aplicações em Mockups</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Missão, Visão e Valores</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Proposta Única de Valor (PUV)</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>DNA da Marca</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Linha do Tempo e Planejamento</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Comunicação e Tom de Voz</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Arquétipo do Cliente Ideal</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
                       </div>
                       <div className="mt-10">
-                        <a className=" p-3 text-xl font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
+                        <a className=" p-3 text-lg font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
                         href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20CRIAÇÃO DA MARCA" target="_blank"
                         >
-                          COMEÇAR MEU PROJETO
+                        Quero uma criação da marca
                         </a>
                       </div>
                     </div>
                   </div>
-                </SwiperSlide>
-                <SwiperSlide className="px-2 ">
+                </div>
+                <div className="p-4">
                   <div className="serv rounded-2xl text-white ">
                       <div className="flex p-2 text-start items-center justify-between">
                         <h1 className="luf text-xl font-semibold mt-2">Identidade Visual</h1>
               
-                        <div className="bg-green-600 w-25 h-6 text-white flex justify-center items-center font-semibold text-[14px]">Mais Vendido</div>
+                        <div className="bg-green-600 w-26 h-6 text-white flex justify-center items-center font-semibold text-[14px]">Mais Requerido</div>
               
                       </div>
-                      <div className="p-2">
-                      <h2  className="flex gap-1 text-sm"> DE <p className="line-through text-gray-300"> R$ 1000,00 </p> POR</h2>
-                      <div className="text-2xl font-bold">R$ 650,00</div>
+                      <div className="p-2 h-56">
+
                       <div className="luf">
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck> LOGOTIPO</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>  PALETA DE CORES</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>  Hieraquia de Texto</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Elementos Gráficos</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Aplicações em Mockups</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Missão, Visão e Valores</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Proposta Única de Valor (PUV)</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>DNA da Marca</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Linha do Tempo e Planejamento</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Comunicação e Tom de Voz</p>
-                        <p className="flex items-center gap-1"> <FiX size={18} className="text-red-600"></FiX>Arquétipo do Cliente Ideal</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Elementos Gráficos</p>
                       </div>
                       <div className="mt-10">
-                        <a className=" p-3 text-xl font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
+                        <a className=" p-3 text-lg font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
                         href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20IDDENTIADE A MARCA" target="_blank"
                         >
-                          COMEÇAR MEU PROJETO
+                          Quero uma identidade visual
                         </a>
                       </div>
                     </div>
                   </div>
-                </SwiperSlide>
-                <SwiperSlide className="px-2">
+                </div>
+                <div className="p-4">
                   <div className="serv rounded-2xl text-white">
                       <div className="flex flex-col p-2 text-start">
                         <h1 className="luf text-xl font-semibold mt-2">Projeto de Branding</h1>
                       </div>
-                      <div className="p-2">
-                      <h2  className="flex gap-1 text-sm"> DE <p className="line-through text-gray-300"> R$ 1200,00 </p> POR</h2>
-                      <div className="text-2xl font-bold">R$ 850,00</div>
+                      <div className="p-2 h-98">
                       <div className="luf">
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck> LOGOTIPO</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>  PALETA DE CORES</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>  Hieraquia de Texto</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Elementos Gráficos</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Aplicações em Mockups</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Missão, Visão e Valores</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Proposta Única de Valor (PUV)</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>DNA da Marca</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Linha do Tempo e Planejamento</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Comunicação e Tom de Voz</p>
-                        <p className="flex items-center gap-1"> <FiCheck size={18} className="text-green-400"></FiCheck>Arquétipo do Cliente Ideal</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400  hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Elementos Gráficos</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Aplicações em Mockups</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Missão, Visão e Valores</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Proposta Única de Valor (PUV)</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>DNA da Marca</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Linha do Tempo e Planejamento</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Comunicação e Tom de Voz</p>
+                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Arquétipo do Cliente Ideal</p>
                       </div>
                       <div className="mt-10">
-                        <a className=" p-3 text-xl font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
+                        <a className=" p-3 text-lg font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
                         href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                         >
-                          COMEÇAR MEU PROJETO
+                         Quero meu Projeto Branding
                         </a>
                       </div>
                     </div>
                   </div>
-                </SwiperSlide>
+                </div>
               
-              </Swiper>
             </div>
 
           </section>
