@@ -1,7 +1,9 @@
 
 .hero4{
     background-color: black;
-    height: 100vh;
+    height: auto;
+    min-height: 100svh; 
+    overflow: visible;
     width: 100vw;
     z-index: 10;
     position: relative;
@@ -20,7 +22,7 @@
 
 .serv{
     background-color: #270233;
-    width: 300px;
+    width: 320px;
     height: 500px;
 }
 

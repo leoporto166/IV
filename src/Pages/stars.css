@@ -1,12 +1,14 @@
 
 .ceu{
-  height: 180vh;
+  height: 1690px;
   margin: 0;
   padding: 0;
   background: radial-gradient(circle at bottom, #29173a, #000);
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
 
 }
 

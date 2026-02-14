@@ -578,7 +578,7 @@ useEffect(() => {
                   breakpoints={{
                     320: {
                       slidesPerView: 1.3,
-                      spaceBetween: 1
+                      spaceBetween: 33
                     },
                     640:{
                       slidesPerView: 1.5,
@@ -603,7 +603,7 @@ useEffect(() => {
                     1600:{
                       slidesPerView: 5.2,
                     }
-                  }} className="w-full mt-[-300px]"
+                  }} className="w-full"
               >
                 <SwiperSlide className="px-2">
                   <div className="serv rounded-2xl text-white">
@@ -641,7 +641,7 @@ useEffect(() => {
                       <div className="flex p-2 text-start items-center justify-between">
                         <h1 className="luf text-xl font-semibold mt-2">Identidade Visual</h1>
               
-                        <div className="bg-green-600 w-25 h-6 text-white flex justify-center items-center font-semibold">Mais Vendido</div>
+                        <div className="bg-green-600 w-25 h-6 text-white flex justify-center items-center font-semibold text-[14px]">Mais Vendido</div>
               
                       </div>
                       <div className="p-2">

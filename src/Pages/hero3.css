@@ -1,21 +1,16 @@
 .hero3{
   width: 100vw;
-  height: 180vh;
+  height: 1690px;
   position: relative;
+  height: auto;
+  min-height: 100svh;
+  overflow: visible;
 
 }
-
-.hero3{
-  width: 100vw;
-  height: 180vh;
-  position: relative;
-
-}
-
 
 .linhaHero3{
   width: 1px;
-  height: 160vh;
+  height: 1490px;
 }
 
 .a{

@@ -6,8 +6,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden; 
+  height: auto;
+  min-height: 100svh; /* mobile safe */
+  overflow: visible;
   position: relative;
   z-index: 10;
   

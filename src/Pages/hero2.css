@@ -3,11 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 90vh;
+  height: auto;
+  min-height: 100svh;
+  overflow: visible;
   opacity: 0;
   animation: aparecer 1.2s ease-out forwards;
   animation-delay: 1.6s;
-  overflow-x: hidden;
   z-index: 20;
 }
 
