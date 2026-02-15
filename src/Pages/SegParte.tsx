@@ -143,7 +143,7 @@ useEffect(() => {
         </div>
         </section>
 
-        <section className="hero2 bg-white rounded-2xl mt-[-150px]">
+        <section className="hero2  bg-white rounded-2xl mt-[-150px]">
             <div className="part1 ">
               <h1 className="nelius text-xl font-semibold text-black textp1 
               ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
