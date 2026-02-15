@@ -148,7 +148,7 @@ useEffect(() => {
         </div>
         </section>
 
-        <section className="hero2  bg-white rounded-2xl mt-[-150px]">
+        <section className="hero2  bg-gray-100 rounded-2xl mt-[-150px]">
             <div className="part1 ">
               <h1 className="nelius text-xl font-semibold text-black textp1 
               ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
@@ -185,11 +185,11 @@ useEffect(() => {
 
         </section>
 
-        <section className="part2  p-2 " ref={secaoRef}>
+        <section className="part2 bg-gray-100 p-2 " ref={secaoRef}>
             <div className="flex flex-col justify-center items-center">
               <div>
 
-                <img src={logo1} className="w-30"></img>
+                <img src={logo1} className="w-50"></img>
 
               </div>
               <Swiper
@@ -257,7 +257,7 @@ useEffect(() => {
 
               <div>
 
-                  <img src={logo2} className="w-30"></img>
+                  <img src={logo2} className="w-50"></img>
 
               </div>
               <Swiper
@@ -300,7 +300,7 @@ useEffect(() => {
 
                           <SwiperSlide>
                               <div
-                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-left bg-cover"
                                 style={{ backgroundImage: `url(${case2Dois})` }}
                                 >
                                     
@@ -309,7 +309,7 @@ useEffect(() => {
 
                           <SwiperSlide>
                               <div
-                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-center bg-cover"
+                                className="w-full h-10/12 rounded-2xl shadow-black/20 shadow-lg bg-left bg-cover"
                                 style={{ backgroundImage: `url(${case2})` }}
                                 >
                                     
@@ -320,7 +320,7 @@ useEffect(() => {
               </Swiper>
 
               <div>
-                <img src={logo3} className="w-30"></img>  
+                <img src={logo3} className="w-50"></img>  
               </div>
 
               <Swiper
@@ -631,13 +631,100 @@ useEffect(() => {
 
         </section>
 
+        <section className="hero5 flex justify-center items-center p-4">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            slidesPerView={1}
+            spaceBetween = {20}
+            navigation
+            //autoplay = 5000
+            className=" h-[400px]"
+            breakpoints={{
+              320: {
+                slidesPerView: 1.3,
+                spaceBetween: 20
+              },
+              640:{
+                slidesPerView: 1.5,
+                spaceBetween:20
+              },
+              641:{
+                slidesPerView: 1.7
+        
+              },
+              760:{
+                slidesPerView: 2.5
+              },
+              910:{
+                slidesPerView: 2.8
+              },
+              1024:{
+                slidesPerView: 3.2,
+              },
+              1250:{
+                slidesPerView: 4,
+              },
+              1600:{
+                slidesPerView: 5.2,
+              }
+            }}
+          >
+
+            <SwiperSlide className="">
+
+              <div className="slide rounded-xl p-2 mt-5" >
+                <img src={lucas} className="img"></img>
+                <div className="w-full">
+
+                  <p className="w-[270px] h-[170px] pub text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+
+                  <h1 className="luf font-bold">Lucas Porto</h1>
+
+                </div>
+
+                
+              </div>
+
+            </SwiperSlide>
+
+            <SwiperSlide>
+
+               <div className="slide rounded-xl p-2 mt-5">
+                 <img src={lucas} className="img"></img>
+    
+                  <p className="italic w-[270px] h-[170px] pub  text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+
+                  <h1 className="luf font-bold">Lucas Porto</h1>
+
+               </div>
+
+            </SwiperSlide>
+
+            <SwiperSlide>
+
+               <div className="slide rounded-xl p-2 mt-5">
+                 <img src={Leo} className="img"></img>
+                 
+                  <p className="italic w-[270px] h-[170px] pub text-sm  mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+
+                  <h1 className="luf font-bold">Leonardo Porto</h1>
+
+               </div>
+
+            </SwiperSlide>
+            
+          </Swiper>
+
+                 
+        </section>
+
         <section className="hero4 mt-[-5px] ">
 
-            <div className="w-full ml-18">
-              <h1 className="nelius text-4xl text-white">Nossos Serviços</h1>
+            <div className="w-full ml-18 mt-4">
+              <h1 className="nelius text-4xl text-black">Nossos Serviços</h1>
             </div>
           
-          <section className="hero4-2 rounded-t-2xl flex flex-wrap justify-center items-center">
+          <section className="hero4-2 rounded-t-2xl flex flex-wrap justify-center items-center bg-black">
 
             <div className="w-full flex justify-center items-center flex-col">
 
@@ -727,93 +814,6 @@ useEffect(() => {
           </section>
 
 
-        </section>
-
-        <section className="hero5 flex justify-center items-center p-4">
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            slidesPerView={1}
-            spaceBetween = {20}
-            navigation
-            //autoplay = 5000
-            className=" h-[400px]"
-            breakpoints={{
-              320: {
-                slidesPerView: 1.3,
-                spaceBetween: 20
-              },
-              640:{
-                slidesPerView: 1.5,
-                spaceBetween:20
-              },
-              641:{
-                slidesPerView: 1.7
-        
-              },
-              760:{
-                slidesPerView: 2.5
-              },
-              910:{
-                slidesPerView: 2.8
-              },
-              1024:{
-                slidesPerView: 3.2,
-              },
-              1250:{
-                slidesPerView: 4,
-              },
-              1600:{
-                slidesPerView: 5.2,
-              }
-            }}
-          >
-
-            <SwiperSlide className="">
-
-              <div className="slide rounded-xl p-2 mt-5" >
-                <img src={lucas} className="img"></img>
-                <div className="w-full">
-
-                  <p className="w-[270px] h-[170px] pub text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
-
-                  <h1 className="luf font-bold">Lucas Porto</h1>
-
-                </div>
-
-                
-              </div>
-
-            </SwiperSlide>
-
-            <SwiperSlide>
-
-               <div className="slide rounded-xl p-2 mt-5">
-                 <img src={lucas} className="img"></img>
-    
-                  <p className="italic w-[270px] h-[170px] pub  text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
-
-                  <h1 className="luf font-bold">Lucas Porto</h1>
-
-               </div>
-
-            </SwiperSlide>
-
-            <SwiperSlide>
-
-               <div className="slide rounded-xl p-2 mt-5">
-                 <img src={Leo} className="img"></img>
-                 
-                  <p className="italic w-[270px] h-[170px] pub text-sm  mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
-
-                  <h1 className="luf font-bold">Leonardo Porto</h1>
-
-               </div>
-
-            </SwiperSlide>
-            
-          </Swiper>
-
-                 
         </section>
     </body>
   );

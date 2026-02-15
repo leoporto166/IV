@@ -27,14 +27,14 @@
 .animation-text{
   animation: textColor 2s ease-out forwards;
   animation-delay: 3s;
-  color: rgb(255, 253, 253);
+  color: rgb(0, 0, 0);
 }
 
 .animation-text::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #491b58;
+  background-color: #4d1d5e;
   margin-top: 76px;
   width: 340px;
   height: 30px;
@@ -112,7 +112,7 @@
 
 @keyframes textColor {
   to {
-    color: white;
+    color: rgb(255, 255, 255);
   }
 }
 
@@ -128,7 +128,8 @@
 
 .part2{
 
-  height: 275vh;
+  height: 295vh;
+
 
 }
 

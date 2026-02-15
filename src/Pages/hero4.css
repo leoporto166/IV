@@ -10,13 +10,12 @@
   overflow: hidden;
 
   z-index: 20;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 
 .hero4-2{
 
-    background-color: rgb(255, 255, 255);
     height: 200vh;
     width: 100vw;
     z-index: 10;
