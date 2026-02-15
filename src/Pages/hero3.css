@@ -1,11 +1,11 @@
 .hero3{
-  width: 100vw;
-  height: 1690px;
+  width: 100%;
   position: relative;
-  height: auto;
-  min-height: 100svh;
-  overflow: visible;
 
+  min-height: 100vh;
+  height: auto;
+
+  overflow: hidden;   /* ESSENCIAL */
 }
 
 .linhaHero3{

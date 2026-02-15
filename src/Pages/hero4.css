@@ -1,14 +1,21 @@
 
-.hero4{
-    background-color: black;
-    height: auto;
-    min-height: 100svh; 
-    overflow: visible;
-    width: 100vw;
-    z-index: 10;
-    position: relative;
-}
+.hero2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  min-height: 100vh; /* NÃO svh */
+  height: auto;
+
+  overflow: hidden; /* ← ESSENCIAL */
+  opacity: 0;
+
+  animation: aparecer 1.2s ease-out forwards;
+  animation-delay: 1.6s;
+
+  z-index: 20;
+}
 
 
 .hero4-2{
@@ -22,7 +29,7 @@
 
 .serv{
     background-color: #270233;
-    width: 340px;
+    width: 360px;
     height: auto;
 }
 

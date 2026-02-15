@@ -1,14 +1,18 @@
-.hero2{
+.hero2 {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  min-height: 100vh; /* NÃO svh */
   height: auto;
-  min-height: 100svh;
-  overflow: visible;
+
+  overflow: hidden; /* ← ESSENCIAL */
   opacity: 0;
+
   animation: aparecer 1.2s ease-out forwards;
   animation-delay: 1.6s;
+
   z-index: 20;
 }
 
@@ -52,7 +56,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #8c19b3;
+  background-color: #491b58;
   margin-top: 76px;
   width: 340px;
   height: 30px;
@@ -80,7 +84,7 @@
   position: absolute;
   inset: 0;
   padding: 2px; /* espessura da borda */
-  background: linear-gradient(90deg, #8b5cf6, #280074);
+  background: linear-gradient(90deg, #7a52da, #2909b9);
   border-radius: 16px;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -143,12 +147,7 @@
 /*Parte Artes*/
 
 .part2{
-   height: 270vh;
+   height: 250vh;
 }
 
-.buttonEscuro{
-
-  background: linear-gradient(to right, #7C5E8D, #9d37d4, #ae4de2);
-
-}
 

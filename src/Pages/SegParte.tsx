@@ -27,8 +27,6 @@ import { useEffect, useRef, useState } from "react";
 import "./stars.css"
 import lucas from "../img/Lucas.jpg"
 
-import { FiX } from "react-icons/fi";
-import { FiCheck } from "react-icons/fi";
 import { FiArrowRight } from "react-icons/fi";
 
 
@@ -670,8 +668,7 @@ useEffect(() => {
 
         </section>
 
-
-        <section className="hero4 ">
+        <section className="hero4 mt-[-5px] ">
 
             <div className="">
               <h1 className="nelius text-4xl text-white mx-12 pt-10">Nossos Serviços</h1>
@@ -686,14 +683,17 @@ useEffect(() => {
                       <div className="flex flex-col text-start p-2">
                         <h1 className="luf text-xl font-bold mt-2">Criação de Marca</h1>
                       </div>
-                      <div className="p-2 h-50">
-                      <div className="luf">
+                      <div className="p-2 h-80">
+
+                        <p className="text-sm luf text-gray-200 mb-2 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa fugiat id doloremque, veritatis quibusdam repellat obcaecati a consectetur, laboriosam recusandae, voluptas aut iste vitae vel minus commodi placeat reprehenderit repudiandae.</p>
+
+                      <div className="nelius">
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
                       </div>
                       <div className="mt-10">
-                        <a className=" p-3 text-lg font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
+                        <a className=" p-3 text-sm font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button luf "
                         href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20CRIAÇÃO DA MARCA" target="_blank"
                         >
                         Quero uma criação da marca
@@ -702,6 +702,7 @@ useEffect(() => {
                     </div>
                   </div>
                 </div>
+
                 <div className="p-4">
                   <div className="serv rounded-2xl text-white ">
                       <div className="flex p-2 text-start items-center justify-between">
@@ -710,16 +711,16 @@ useEffect(() => {
                         <div className="bg-green-600 w-26 h-6 text-white flex justify-center items-center font-semibold text-[14px]">Mais Requerido</div>
               
                       </div>
-                      <div className="p-2 h-56">
-
-                      <div className="luf">
+                      <div className="p-2 h-86">
+                        <p className="text-sm luf text-gray-200 mb-2 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa fugiat id doloremque, veritatis quibusdam repellat obcaecati a consectetur, laboriosam recusandae, voluptas aut iste vitae vel minus commodi placeat reprehenderit repudiandae.</p>
+                      <div className="nelius">
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Elementos Gráficos</p>
                       </div>
                       <div className="mt-10">
-                        <a className=" p-3 text-lg font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
+                        <a className=" p-3 text-sm  font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button luf "
                         href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20IDDENTIADE A MARCA" target="_blank"
                         >
                           Quero uma identidade visual
@@ -728,13 +729,15 @@ useEffect(() => {
                     </div>
                   </div>
                 </div>
+
                 <div className="p-4">
                   <div className="serv rounded-2xl text-white">
                       <div className="flex flex-col p-2 text-start">
                         <h1 className="luf text-xl font-semibold mt-2">Projeto de Branding</h1>
                       </div>
-                      <div className="p-2 h-98">
-                      <div className="luf">
+                      <div className="p-2 h-128">
+                        <p className="text-sm luf text-gray-200 mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa fugiat id doloremque, veritatis quibusdam repellat obcaecati a consectetur, laboriosam recusandae, voluptas aut iste vitae vel minus commodi placeat reprehenderit repudiandae.</p>
+                      <div className="nelius">
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400  hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
@@ -748,10 +751,10 @@ useEffect(() => {
                         <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Arquétipo do Cliente Ideal</p>
                       </div>
                       <div className="mt-10">
-                        <a className=" p-3 text-lg font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
+                        <a className=" p-3 text-sm  font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button luf "
                         href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                         >
-                         Quero meu Projeto Branding
+                         Quero meu projeto de branding
                         </a>
                       </div>
                     </div>
