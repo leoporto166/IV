@@ -2,6 +2,7 @@ import "./Seg.css";
 import "./hero2.css"
 import "./hero3.css"
 import "./hero4.css"
+import "./hero5.css"
 import farol from "../img/farol3.png";
 import Logo from "../img/logoPorto2.png"
 
@@ -9,23 +10,27 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import type { Swiper as SwiperClass } from "swiper";
 
-import case1 from "../img/projeto1.png"
-import case1Dois from "../img/upzion2.jpeg"
-import case1Tres from "../img/upzion1.jpeg"
+import case1 from "../img/acao3.png"
+import case1Dois from "../img/acao2.png"
+import case1Tres from "../img/acao1.png"
+import logo1 from "../img/acaoLogo.png"
 
-import case2 from "../img/triad.png"
-import case2Dois from "../img/triad2.png"
-import case2Tres from "../img/triad1.png"
+import case2 from "../img/chico3.png"
+import case2Dois from "../img/chico1.png"
+import case2Tres from "../img/chico2.png"
+import logo2 from "../img/chicoLogo.png"
 
 import case3 from "../img/conne3.jpeg"
 import case3Dois from "../img/conne1.jpeg"
 import case3Tres from "../img/conne2.jpeg"
+import logo3 from "../img/conexasLogo.png"
 
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 
 import "./stars.css"
 import lucas from "../img/Lucas.jpg"
+import Leo from "../img/Leo.jpeg"
 
 import { FiArrowRight } from "react-icons/fi";
 
@@ -149,10 +154,10 @@ useEffect(() => {
               ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
               <h2 className="font-semibold text textp1 description luf">Desenvolvemos identidades visuais pensadas para posicionar sua empresa com clareza, autoridade e consistência no mercado.</h2>
               <div className="flex justify-center items-center">
-                  <a className=" p-3 text-xl font-bold rounded-2xl mt-2 b-2  cursor-pointer button"
+                  <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center"
                   href="https://wa.me/62982616305" target="_blank"
                   >
-                      COMEÇAR MEU PROJETO
+                      Começar meu projeto
                   </a>
               </div>
             </div>
@@ -167,10 +172,10 @@ useEffect(() => {
                 <h2 className="font-semibold text textp1 description luf">Deixe de perder clientes por uma imagem confusa ou pouco alinhada com seu propósito. Nós da Porto vamos fazer isso para você. </h2>
 
                 <div className="flex justify-center items-center">
-                    <a className=" animate-gradient p-3 text-xl font-bold rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button"
+                    <a className=" animate-gradient p-3 text-sm font-semibold not-target:not-visited:rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button luf w-60 text-center"
                     href="https://wa.me/62982616305" target="_blank"
                     >
-                        COMEÇAR MEU PROJETO
+                        Começar meu projeto
                 
                     </a>
                 </div>
@@ -182,6 +187,11 @@ useEffect(() => {
 
         <section className="part2  p-2 " ref={secaoRef}>
             <div className="flex flex-col justify-center items-center">
+              <div>
+
+                <img src={logo1} className="w-30"></img>
+
+              </div>
               <Swiper
                             
                 pagination={{ clickable: true }}
@@ -194,7 +204,7 @@ useEffect(() => {
                 onSlideChange={(swiper) => {
                   ativarLuz(1, swiper.activeIndex);
                 }}
-                className=" w-full mt-10 h-[500px] mb-[100px]"
+                className=" w-full mt-10 h-[500px] mb-[100px] mt-[-42px]"
 
 
                 ><style>
@@ -221,12 +231,6 @@ useEffect(() => {
                                     
                             </div>
 
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
 
                           <SwiperSlide>
@@ -237,12 +241,7 @@ useEffect(() => {
                                     
                             </div>
 
-                            <div className="mt-5">
 
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
 
                           <SwiperSlide>
@@ -252,16 +251,15 @@ useEffect(() => {
                                 >
                                     
                             </div>
-
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
             
               </Swiper>
+
+              <div>
+
+                  <img src={logo2} className="w-30"></img>
+
+              </div>
               <Swiper
                 pagination={{ clickable: true }}
                 modules={[Navigation, Pagination, Autoplay]}
@@ -273,7 +271,7 @@ useEffect(() => {
                 onSlideChange={(swiper) => {
                   ativarLuz(2, swiper.activeIndex);
                 }}
-                className=" w-full mt-10 h-[500px] mb-[100px]"
+                className=" w-full mt-10 h-[500px] mb-[100px] mt-[-32px]"
 
 
                 ><style>
@@ -288,7 +286,7 @@ useEffect(() => {
                             }
                         `}
                     </style>
-            
+                    
             
                           <SwiperSlide>
                               <div
@@ -298,12 +296,6 @@ useEffect(() => {
                                     
                             </div>
 
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
 
                           <SwiperSlide>
@@ -312,13 +304,6 @@ useEffect(() => {
                                 style={{ backgroundImage: `url(${case2Dois})` }}
                                 >
                                     
-                            </div>
-
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
                             </div>
                           </SwiperSlide>
 
@@ -330,15 +315,13 @@ useEffect(() => {
                                     
                             </div>
 
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
             
               </Swiper>
+
+              <div>
+                <img src={logo3} className="w-30"></img>  
+              </div>
 
               <Swiper
                 pagination={{ clickable: true }}
@@ -351,7 +334,7 @@ useEffect(() => {
                 onSlideChange={(swiper) => {
                   ativarLuz(3, swiper.activeIndex);
                 }}
-                className=" w-full mt-10 h-[500px] mb-[100px]"
+                className=" w-full mt-10 h-[500px] mb-[100px] mt-[-25px]"
 
 
                 ><style>
@@ -376,12 +359,6 @@ useEffect(() => {
                                     
                             </div>
 
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
 
                           <SwiperSlide>
@@ -392,12 +369,6 @@ useEffect(() => {
                                     
                             </div>
 
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
 
                           <SwiperSlide>
@@ -408,12 +379,6 @@ useEffect(() => {
                                     
                             </div>
 
-                            <div className="mt-5">
-
-                                <h2 className="nelius text-lg font-semibold text-black 
-                                ">Upzion</h2>
-
-                            </div>
                           </SwiperSlide>
             
               </Swiper>
@@ -654,24 +619,22 @@ useEffect(() => {
                   </h2>
                 </div>
                 </div>
-                <div className="mt-10">
-                    <a className=" p-3 text-5xl font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button "
+                <div className="mt-10 button">
+                    <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20"
                     href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                     >
                       COMEÇAR MEU PROJETO
                     </a>
                 </div>
               </motion.div>
-            </div>
-
-            
+            </div>           
 
         </section>
 
         <section className="hero4 mt-[-5px] ">
 
-            <div className="">
-              <h1 className="nelius text-4xl text-white mx-12 pt-10">Nossos Serviços</h1>
+            <div className="w-full ml-18">
+              <h1 className="nelius text-4xl text-white">Nossos Serviços</h1>
             </div>
           
           <section className="hero4-2 rounded-t-2xl flex flex-wrap justify-center items-center">
@@ -707,8 +670,6 @@ useEffect(() => {
                   <div className="serv rounded-2xl text-white ">
                       <div className="flex p-2 text-start items-center justify-between">
                         <h1 className="luf text-xl font-semibold mt-2">Identidade Visual</h1>
-              
-                        <div className="bg-green-600 w-26 h-6 text-white flex justify-center items-center font-semibold text-[14px]">Mais Requerido</div>
               
                       </div>
                       <div className="p-2 h-86">
@@ -766,6 +727,93 @@ useEffect(() => {
           </section>
 
 
+        </section>
+
+        <section className="hero5 flex justify-center items-center p-4">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            slidesPerView={1}
+            spaceBetween = {20}
+            navigation
+            //autoplay = 5000
+            className=" h-[400px]"
+            breakpoints={{
+              320: {
+                slidesPerView: 1.3,
+                spaceBetween: 20
+              },
+              640:{
+                slidesPerView: 1.5,
+                spaceBetween:20
+              },
+              641:{
+                slidesPerView: 1.7
+        
+              },
+              760:{
+                slidesPerView: 2.5
+              },
+              910:{
+                slidesPerView: 2.8
+              },
+              1024:{
+                slidesPerView: 3.2,
+              },
+              1250:{
+                slidesPerView: 4,
+              },
+              1600:{
+                slidesPerView: 5.2,
+              }
+            }}
+          >
+
+            <SwiperSlide className="">
+
+              <div className="slide rounded-xl p-2 mt-5" >
+                <img src={lucas} className="img"></img>
+                <div className="w-full">
+
+                  <p className="w-[270px] h-[170px] pub text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+
+                  <h1 className="luf font-bold">Lucas Porto</h1>
+
+                </div>
+
+                
+              </div>
+
+            </SwiperSlide>
+
+            <SwiperSlide>
+
+               <div className="slide rounded-xl p-2 mt-5">
+                 <img src={lucas} className="img"></img>
+    
+                  <p className="italic w-[270px] h-[170px] pub  text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+
+                  <h1 className="luf font-bold">Lucas Porto</h1>
+
+               </div>
+
+            </SwiperSlide>
+
+            <SwiperSlide>
+
+               <div className="slide rounded-xl p-2 mt-5">
+                 <img src={Leo} className="img"></img>
+                 
+                  <p className="italic w-[270px] h-[170px] pub text-sm  mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+
+                  <h1 className="luf font-bold">Leonardo Porto</h1>
+
+               </div>
+
+            </SwiperSlide>
+            
+          </Swiper>
+
+                 
         </section>
     </body>
   );

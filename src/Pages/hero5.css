@@ -1,0 +1,19 @@
+.hero5{
+
+    background-color: rgb(255, 253, 253);
+    height: 400px;
+
+}
+
+.slide{
+    cursor: pointer;
+    height: 300px;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.158);
+}
+
+.img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}

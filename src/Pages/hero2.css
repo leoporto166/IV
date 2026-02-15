@@ -71,6 +71,8 @@
           mask-composite: exclude;
 }
 
+
+
 @media (max-width: 600px) {
   
   .linha{
@@ -125,8 +127,8 @@
 /*Parte Artes*/
 
 .part2{
-   height: 250vh;
 
+  height: 275vh;
 
 }
 
