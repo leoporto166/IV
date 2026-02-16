@@ -34,6 +34,8 @@ import Leo from "../img/Leo.jpeg"
 
 import { FiArrowRight } from "react-icons/fi";
 
+import { Menu } from "../components/menu";
+
 
 
 export default function SegParte() {
@@ -134,6 +136,8 @@ useEffect(() => {
         <div className="luz-global luz-top"></div>
         <div className="luz-global luz-bottom"></div>
 
+        <Menu></Menu>
+
         <section className="hero">
         <div className="farol-wrapper">
             <img className="farol" src={farol} />
@@ -185,7 +189,9 @@ useEffect(() => {
 
         </section>
 
-        <section className="part2 bg-gray-100 p-2 " ref={secaoRef}>
+        <section className="part2 bg-gray-100 p-2 " ref={secaoRef}
+        id="marcas"
+        >
             <div className="flex flex-col justify-center items-center">
               <div>
 
@@ -386,6 +392,7 @@ useEffect(() => {
         </section>
 
         <section className="hero3 flex justify-center relative mt-10 ceu"
+        id="porto"
 
         >
 
@@ -631,7 +638,8 @@ useEffect(() => {
 
         </section>
 
-        <section className="hero5 flex justify-center items-center p-4">
+        <section className="hero5 flex justify-center items-center p-4"
+        id="avaliações">
           <Swiper
             modules={[Pagination, Autoplay]}
             slidesPerView={1}
@@ -718,10 +726,10 @@ useEffect(() => {
                  
         </section>
 
-        <section className="hero4 mt-[-5px] ">
+        <section className="hero4 mt-[-5px] " id="soluções">
 
             <div className="w-full ml-18 mt-4">
-              <h1 className="nelius text-4xl text-black">Nossos Serviços</h1>
+              <h1 className="nelius text-4xl text-black">Nossas Avaliações</h1>
             </div>
           
           <section className="hero4-2 rounded-t-2xl flex flex-wrap justify-center items-center bg-black">

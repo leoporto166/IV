@@ -1,0 +1,22 @@
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 95%;
+  height: 55px;
+
+  background: rgba(114, 113, 113, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+  z-index: 1000;
+
+  transform: translatex(2%);
+}
