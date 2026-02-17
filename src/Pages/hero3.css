@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
 
-  min-height: 100vh;
+  min-height: 280vh;
   height: auto;
 
   overflow: hidden;   /* ESSENCIAL */
@@ -10,7 +10,7 @@
 
 .linhaHero3{
   width: 1px;
-  height: 1490px;
+  height: 1857px;
 }
 
 .a{

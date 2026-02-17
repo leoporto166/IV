@@ -10,7 +10,21 @@
 
 @font-face {
   font-family: "Neulis";
-  src: url("./font/NEULISNEUE.OTF") format("opentype");
+  src: url("./font/NeulisAlt-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeulisB";
+  src: url("./font/NeulisAlt-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neulis-regular";
+  src: url("./font/NeulisAlt-Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

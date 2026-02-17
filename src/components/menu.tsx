@@ -12,7 +12,7 @@ export function Menu(){
 
                 <img src={logo} className="w-22 h-20 ml-[-30px] mb-2"></img>
 
-                <div className="flex gap-2 text-white">
+                <div className="flex gap-2 text-white gap-4">
                     <a href="#marcas" className="font-semibold luf text-sm">Marcas</a>
                     <a href="#porto" className="font-semibold luf text-sm">Porto</a>
                     <a href="#avaliações" className="font-semibold luf text-sm">Avaliações</a>

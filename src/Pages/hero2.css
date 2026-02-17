@@ -12,6 +12,7 @@
 
   animation: aparecer 1.2s ease-out forwards;
   animation-delay: 1.6s;
+  z-index: 100;
 }
 
 
@@ -128,7 +129,7 @@
 
 .part2{
 
-  height: 295vh;
+  height: 285vh;
 
 
 }

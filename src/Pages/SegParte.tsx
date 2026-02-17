@@ -32,18 +32,18 @@ import "./stars.css"
 import lucas from "../img/Lucas.jpg"
 import Leo from "../img/Leo.jpeg"
 
-import { FiArrowRight } from "react-icons/fi";
 
 import { Menu } from "../components/menu";
+
+import card1 from "../img/card1.png"
+import card2 from "../img/card2.png"
+import card3 from "../img/card3.png"
 
 
 
 export default function SegParte() {
-const [luzPermitida, setLuzPermitida] = useState(false);
 const secaoRef = useRef<HTMLElement | null>(null);
 const swiperRefs = useRef<(SwiperClass | null)[]>([]);
-const [luzTopoAtiva, setLuzTopoAtiva] = useState(false);
-const [luzBottomAtiva, setLuzBottomAtiva] = useState(false);
 const [contagem, setContagem]  = useState(0)
 const [start, setStart] = useState(false)
 
@@ -57,7 +57,7 @@ useEffect(() => {
     value += 5
     setContagem(value)
 
-    if(value >= 100){
+    if(value >= 50){
       clearInterval(interval)
     } 
 
@@ -67,69 +67,9 @@ useEffect(() => {
 
 }, [start])
 
-useEffect(() => {
-  if (!secaoRef.current) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      const ratio = entry.intersectionRatio;
-
-      // controle geral
-      setLuzPermitida(entry.isIntersecting);
-
-      // TOPO: aparece cedo
-      setLuzTopoAtiva(ratio > 0.35);
-
-      // BOTTOM: só quando está bem dentro
-      setLuzBottomAtiva(ratio > 0.80);
-    },
-    {
-      threshold: [0, 0.35, 0.80, 1],
-    }
-  );
-
-  observer.observe(secaoRef.current);
-
-  return () => observer.disconnect();
-}, []);
 
 
-useEffect(() => {
-  document.body.classList.toggle("luz-topo-ativa", luzTopoAtiva);
-  document.body.classList.toggle("luz-bottom-ativa", luzBottomAtiva);
-}, [luzTopoAtiva, luzBottomAtiva]);
 
-
-const ativarLuz = (swiperId: number, slide: number) => {
-  const container = document.querySelector(
-    `.swiper-wrapper-luz[data-swiper="${swiperId}"]`
-  );
-
-  if (!container) return;
-
-  container.className = container.className
-    .replace(/luz-slide-\d+/g, "")
-    .trim();
-
-  container.classList.add(`luz-slide-${slide + 1}`);
-};
-
-useEffect(() => {
-  if (!luzPermitida) {
-    document.body.className = document.body.className
-      .replace(/luz-slide-\d+/g, "")
-      .trim();
-  }
-}, [luzPermitida]);
-
-useEffect(() => {
-  if (!luzPermitida) return;
-
-  swiperRefs.current.forEach((swiper, index) => {
-    if (!swiper) return;
-    ativarLuz(index + 1, swiper.activeIndex);
-  });
-}, [luzPermitida]);
 
   return (
     <body>
@@ -146,8 +86,9 @@ useEffect(() => {
         
         <div className="texto flex flex-col justify-center items-center">
         <img src={Logo} alt="Logo Marca" className=" mt-[-210px] w-60" />
-          <h2 className="nelius mt-[-80px] text-[20px]">Crie sua logo marca</h2>
-          <p className="luf text-sm">Ilumine sua marca</p>
+          <h2 className="neliusR mt-[-80px] text-[20px]">Design estratégico  para marcas<h2 className="nelius text-[20px]">que querem crescer.</h2></h2>
+
+          <p className="luf text-sm">Criamos identidades visuais preparadas <br /> para escalar e se <span className="luf font-extrabold">tornar referência.</span></p>
 
         </div>
         </section>
@@ -156,7 +97,7 @@ useEffect(() => {
             <div className="part1 ">
               <h1 className="nelius text-xl font-semibold text-black textp1 
               ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
-              <h2 className="font-semibold text textp1 description luf">Desenvolvemos identidades visuais pensadas para posicionar sua empresa com clareza, autoridade e consistência no mercado.</h2>
+              <h2 className=" text textp1 description luf">Criamos identidades visuais estratégicas que posicionam sua empresa com <p className="font-bold">autoridade, diferenciação e visão de crescimento.</p></h2>
               <div className="flex justify-center items-center">
                   <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center"
                   href="https://wa.me/62982616305" target="_blank"
@@ -173,7 +114,11 @@ useEffect(() => {
                 ">Tenha uma lingugaem visual que <span className="font-bold">realmente venda.</span> </h1>
                 <div className="linhaBranco textp1"></div>
 
-                <h2 className="font-semibold text textp1 description luf">Deixe de perder clientes por uma imagem confusa ou pouco alinhada com seu propósito. Nós da Porto vamos fazer isso para você. </h2>
+                <h2 className=" text textp1 description luf">
+                  <span className="font-bold">Sua imagem precisa trabalhar por você. </span>
+                  Uma identidade visual bem construída comunica valor antes mesmo da primeira conversa.
+                  Nós estruturamos sua marca para transmitir confiança, autoridade e profissionalismo em cada ponto de contato. 
+                </h2>
 
                 <div className="flex justify-center items-center">
                     <a className=" animate-gradient p-3 text-sm font-semibold not-target:not-visited:rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button luf w-60 text-center"
@@ -207,10 +152,7 @@ useEffect(() => {
                 onSwiper={(swiper) => {
                   swiperRefs.current[0] = swiper;
                 }}
-                onSlideChange={(swiper) => {
-                  ativarLuz(1, swiper.activeIndex);
-                }}
-                className=" w-full mt-10 h-[500px] mb-[100px] mt-[-42px]"
+                className=" w-full mt-10 h-[500px] mb-[30px] mt-[-42px]"
 
 
                 ><style>
@@ -274,10 +216,7 @@ useEffect(() => {
                 onSwiper={(swiper) => {
                   swiperRefs.current[1] = swiper;
                 }}
-                onSlideChange={(swiper) => {
-                  ativarLuz(2, swiper.activeIndex);
-                }}
-                className=" w-full mt-10 h-[500px] mb-[100px] mt-[-32px]"
+                className=" w-full mt-10 h-[500px] mb-[30px] mt-[-32px]"
 
 
                 ><style>
@@ -337,10 +276,7 @@ useEffect(() => {
                 onSwiper={(swiper) => {
                   swiperRefs.current[2] = swiper;
                 }}
-                onSlideChange={(swiper) => {
-                  ativarLuz(3, swiper.activeIndex);
-                }}
-                className=" w-full mt-10 h-[500px] mb-[100px] mt-[-25px]"
+                className=" w-full mt-10 h-[500px] mb-[30px] mt-[-25px]"
 
 
                 ><style>
@@ -427,18 +363,23 @@ useEffect(() => {
                 <div className=''>
                   <h2 className='text-5xl font-medium nelius text-end mr-3'>Quem somos?</h2>
                   <p className='luf text-2xl mr-3 max-w-[600px] text-end '>
-                    A PortoAVL é um estúdio criativo especializado em identidade visual, 
-                    design estratégico e artes digitais. Nosso propósito é transformar ideias 
-                    em marcas fortes, conectando estética e estratégia para gerar resultados 
-                    reais.
-                    Atendemos criadores de conteúdo, pequenos negócios e marcas em 
-                    crescimento que buscam se destacar no mercado com uma 
-                    comunicação visual única, minimalista e impactante. Nosso diferencial 
-                    está na agilidade e no propósito: cada projeto é desenvolvido com 
-                    atenção aos detalhes, alinhado aos objetivos de negócio e pensado para 
-                    gerar conexão com o público.
-                    Mais do que design, entregamos presença, força e identidade.
-                    Pronto para destacar sua marca?
+                    A PortoAVL é um estúdio criativo especializado em identidade visual e posicionamento de marca.
+
+                    Desenvolvemos marcas com direção estratégica, consistência visual e visão de longo prazo.
+
+                    Cada projeto começa com entendimento profundo do negócio e termina com uma identidade estruturada para sustentar crescimento, autoridade e relevância no mercado.
+
+
+                    Sou Lucas Porto, designer especializado em identidade visual e posicionamento de marca.
+
+                    Trabalho ajudando empresas a organizarem sua comunicação, fortalecerem sua presença no mercado e construírem marcas com mais clareza e consistência.
+
+                    Acredito que design precisa ter intenção.
+                    Cada decisão visual deve sustentar crescimento, percepção de valor e profissionalismo.
+
+
+                    +50 projetos desenvolvidos
+                    Identidades criadas com estratégia e direção clara.
                   </p>
                 </div>
                 </div>
@@ -447,7 +388,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-115 sm:mt-90"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-150 sm:mt-90"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -457,7 +398,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-115 sm:mt-90 items-end"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-150 sm:mt-90 items-end"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -477,7 +418,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-220 sm:mt-190"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-255 sm:mt-190"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -487,7 +428,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-220 sm:mt-190"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-255 sm:mt-190"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -496,8 +437,8 @@ useEffect(() => {
               >
                 <div className="flex flex-col justify-start w-6/12 text-white pl-4">
                 <div className='pr-4'>
-                  <h2 className='text-5xl font-medium nelius text-end mr-3'>+{contagem}</h2>
-                  <h2 className='luf text-2xl text-end mr-3'>Marcas confiam em nós</h2>
+                  <h2 className='text-5xl font-medium nelius text-end mr-3'>+{contagem}Projetos desenvolvidos</h2>
+                  <h2 className='luf text-2xl text-end mr-3'>Identidades criadas com estratégia e direção clara.</h2>
                 </div>
                 </div>
               </motion.div>
@@ -505,7 +446,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-240"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-273"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -515,7 +456,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-240 items-end"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-273 items-end"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -537,7 +478,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-280"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-315"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -547,7 +488,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-280"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-315"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -558,9 +499,12 @@ useEffect(() => {
                 <div className=''>
                   <h2 className='text-5xl font-medium nelius text-end mr-3'>O que nos diferencia</h2>
                   <ul className="text-end text-xl luf">
-                      <li className="py-1">Design com estratégia</li>
-                      <li className="py-1">Processo claro do briefing à entrega</li>
-                      <li className="py-1">Marcas pensadas para crescer</li>
+                      <p>
+                        Acompanhamos cada cliente de forma próxima, do início ao refinamento final.
+
+                        Cada detalhe é discutido, ajustado e alinhado com os objetivos do negócio.
+                        Não entregamos apenas arquivos. Entregamos direção, clareza e segurança nas decisões.
+                      </p>
                   </ul>
                 </div>
                 </div>
@@ -569,7 +513,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-312"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-363"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -579,7 +523,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-312 items-end"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-363 items-end"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -590,9 +534,17 @@ useEffect(() => {
                 <div className='pl-4'>
                   <h2 className='text-5xl font-medium nelius text-start mr-3'>Como trabalhamos</h2>
                   <h2 className='luf text-xl text-start max-w-[600px]'>
-                    Tudo começa com entendimento profundo da marca. 
-                    Depois, estratégia, conceito, design e refinamento.
-                    Sem achismos. Sem pressa. Sem cópia.
+                    <p className="font-bold mt-2">1. Diagnóstico e alinhamento</p> 
+                    Entendemos o negócio, o público e o momento da marca.<br /><br />
+
+                    <p className="font-bold">2. Estratégia e direção criativa</p>
+                    Definimos posicionamento, conceito e base visual.<br /><br />
+
+                    <p className="font-bold">3. Desenvolvimento e refinamento</p>
+                    Construímos a identidade com consistência e atenção aos detalhes.<br /><br />
+
+                    <p className="font-bold">4. Entrega estruturada</p>
+                    Sistema visual organizado e pronto para aplicação.
                   </h2>
                 </div>
                 </div>
@@ -601,7 +553,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-359"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-450"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -611,7 +563,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a items-center mt-364 justify-center"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a items-center mt-460 justify-center"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -729,7 +681,7 @@ useEffect(() => {
         <section className="hero4 mt-[-5px] " id="soluções">
 
             <div className="w-full ml-18 mt-4">
-              <h1 className="nelius text-4xl text-black">Nossas Avaliações</h1>
+              <h1 className="nelius text-4xl text-black">Nossas Soluções</h1>
             </div>
           
           <section className="hero4-2 rounded-t-2xl flex flex-wrap justify-center items-center bg-black">
@@ -737,87 +689,21 @@ useEffect(() => {
             <div className="w-full flex justify-center items-center flex-col">
 
                 <div className="p-4">
-                  <div className="serv rounded-2xl text-white">
-                      <div className="flex flex-col text-start p-2">
-                        <h1 className="luf text-xl font-bold mt-2">Criação de Marca</h1>
-                      </div>
-                      <div className="p-2 h-80">
-
-                        <p className="text-sm luf text-gray-200 mb-2 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa fugiat id doloremque, veritatis quibusdam repellat obcaecati a consectetur, laboriosam recusandae, voluptas aut iste vitae vel minus commodi placeat reprehenderit repudiandae.</p>
-
-                      <div className="nelius">
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
-                      </div>
-                      <div className="mt-10">
-                        <a className=" p-3 text-sm font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button luf "
-                        href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20CRIAÇÃO DA MARCA" target="_blank"
-                        >
-                        Quero uma criação da marca
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  <img src={card1} alt="card um"/>
                 </div>
 
                 <div className="p-4">
-                  <div className="serv rounded-2xl text-white ">
-                      <div className="flex p-2 text-start items-center justify-between">
-                        <h1 className="luf text-xl font-semibold mt-2">Identidade Visual</h1>
-              
-                      </div>
-                      <div className="p-2 h-86">
-                        <p className="text-sm luf text-gray-200 mb-2 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa fugiat id doloremque, veritatis quibusdam repellat obcaecati a consectetur, laboriosam recusandae, voluptas aut iste vitae vel minus commodi placeat reprehenderit repudiandae.</p>
-                      <div className="nelius">
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Elementos Gráficos</p>
-                      </div>
-                      <div className="mt-10">
-                        <a className=" p-3 text-sm  font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button luf "
-                        href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20IDDENTIADE A MARCA" target="_blank"
-                        >
-                          Quero uma identidade visual
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  <img src={card2} alt="card dois"/>
                 </div>
 
                 <div className="p-4">
-                  <div className="serv rounded-2xl text-white">
-                      <div className="flex flex-col p-2 text-start">
-                        <h1 className="luf text-xl font-semibold mt-2">Projeto de Branding</h1>
-                      </div>
-                      <div className="p-2 h-128">
-                        <p className="text-sm luf text-gray-200 mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa fugiat id doloremque, veritatis quibusdam repellat obcaecati a consectetur, laboriosam recusandae, voluptas aut iste vitae vel minus commodi placeat reprehenderit repudiandae.</p>
-                      <div className="nelius">
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400  hover:text-green-300 transition-all duration-400"></FiArrowRight> LOGOTIPO</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  PALETA DE CORES</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>  Hieraquia de Texto</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Elementos Gráficos</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Aplicações em Mockups</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Missão, Visão e Valores</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Proposta Única de Valor (PUV)</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>DNA da Marca</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Linha do Tempo e Planejamento</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Comunicação e Tom de Voz</p>
-                        <p className="flex items-center gap-1"> <FiArrowRight size={18} className="text-gray-400 hover:text-green-300 transition-all duration-400"></FiArrowRight>Arquétipo do Cliente Ideal</p>
-                      </div>
-                      <div className="mt-10">
-                        <a className=" p-3 text-sm  font-bold rounded-2xl  shadow-white/15 shadow-lg cursor-pointer button luf "
-                        href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
-                        >
-                         Quero meu projeto de branding
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  <img src={card3} alt="card tres"/>
                 </div>
+
               
             </div>
+
+
 
           </section>
 
