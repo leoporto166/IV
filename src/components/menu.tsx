@@ -10,7 +10,7 @@ export function Menu(){
 
             <div className=" rounded-4xl menu mt-5">
 
-                <img src={logo} className="w-23 h-20 ml-[-30px] mb-2"></img>
+                <img src={logo} className="w-22 h-20 ml-[-30px] mb-2"></img>
 
                 <div className="flex gap-2 text-white">
                     <a href="#marcas" className="font-semibold luf text-sm">Marcas</a>
