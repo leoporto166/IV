@@ -369,17 +369,6 @@ useEffect(() => {
 
                     Cada projeto começa com entendimento profundo do negócio e termina com uma identidade estruturada para sustentar crescimento, autoridade e relevância no mercado.
 
-
-                    Sou Lucas Porto, designer especializado em identidade visual e posicionamento de marca.
-
-                    Trabalho ajudando empresas a organizarem sua comunicação, fortalecerem sua presença no mercado e construírem marcas com mais clareza e consistência.
-
-                    Acredito que design precisa ter intenção.
-                    Cada decisão visual deve sustentar crescimento, percepção de valor e profissionalismo.
-
-
-                    +50 projetos desenvolvidos
-                    Identidades criadas com estratégia e direção clara.
                   </p>
                 </div>
                 </div>
@@ -388,7 +377,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-150 sm:mt-90"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-80 sm:mt-90"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -398,7 +387,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-150 sm:mt-90 items-end"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-80 sm:mt-90 items-end"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -408,9 +397,12 @@ useEffect(() => {
                 <div className='gap-2'>
                   <h2 className='text-5xl font-medium nelius'>Criador da PORTO</h2>
                   <img src={lucas} className="rounded-xl w-90"></img>
-                  <p className='luf text-xl max-w-[500px]'>A Porto nasceu da visão criativa de Lucas, que conduz cada projeto de forma próxima e
-                  personalizada. Do conceito inicial à entrega final, todo o processo é pensado para traduzir
-                  a essência de cada marca em uma identidade visual forte, clara e memorável.</p>
+                  <p className='luf text-xl max-w-[500px]'>Sou Lucas Porto, designer especializado em identidade visual e posicionamento de marca.
+
+                Trabalho ajudando empresas a organizarem sua comunicação, fortalecerem sua presença no mercado e construírem marcas com mais clareza e consistência.
+
+                Acredito que design precisa ter intenção.
+                Cada decisão visual deve sustentar crescimento, percepção de valor e profissionalismo.</p>
                 </div>
                 </div>
               </motion.div>
@@ -418,7 +410,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-255 sm:mt-190"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-200 sm:mt-190"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -428,7 +420,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-255 sm:mt-190"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-200 sm:mt-190"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -437,7 +429,7 @@ useEffect(() => {
               >
                 <div className="flex flex-col justify-start w-6/12 text-white pl-4">
                 <div className='pr-4'>
-                  <h2 className='text-5xl font-medium nelius text-end mr-3'>+{contagem}Projetos desenvolvidos</h2>
+                  <h2 className='text-5xl font-medium nelius text-end mr-3'>+{contagem} Projetos desenvolvidos</h2>
                   <h2 className='luf text-2xl text-end mr-3'>Identidades criadas com estratégia e direção clara.</h2>
                 </div>
                 </div>
@@ -446,7 +438,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-273"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-230"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -456,7 +448,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-273 items-end"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-230 items-end"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -478,7 +470,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-315"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-275"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -488,7 +480,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-315"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-275"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -513,7 +505,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-363"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-323"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -523,7 +515,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-363 items-end"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a mt-323 items-end"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -553,7 +545,7 @@ useEffect(() => {
 
             <div className="">
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-450"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col items-center mt-410"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
@@ -563,7 +555,7 @@ useEffect(() => {
               </motion.div>
               
               <motion.div
-                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a items-center mt-460 justify-center"
+                className="absolute left-1/2 -translate-x-1/2 top-10 flex flex-col a items-center mt-420 justify-center"
                 initial={{ opacity: 0, scale: 0.6 }}
                 whileInView={{ opacity: 1, scale: 0.5 }}
                 transition={{ duration: 2 }}
