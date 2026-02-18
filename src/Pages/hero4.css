@@ -5,8 +5,7 @@
   flex-direction: column;
   align-items: center;
 
-  min-height: 100px;
-  height: auto;
+  height: 2300px;
   overflow: hidden;
 
   z-index: 20;
@@ -16,7 +15,7 @@
 
 .hero4-2{
 
-    height: 230vh;
+    height: 2300px;
     width: 100vw;
     z-index: 10;
     margin-top: 100px;

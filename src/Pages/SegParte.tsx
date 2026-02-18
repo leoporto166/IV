@@ -31,6 +31,8 @@ import { useEffect, useRef, useState } from "react";
 import "./stars.css"
 import lucas from "../img/Lucas.jpg"
 import Leo from "../img/Leo.jpeg"
+import sla from "../img/sla.jpeg"
+import mt from "../img/mt.jpeg"
 
 
 import { Menu } from "../components/menu";
@@ -38,6 +40,9 @@ import { Menu } from "../components/menu";
 import card1 from "../img/card1.png"
 import card2 from "../img/card2.png"
 import card3 from "../img/card3.png"
+
+import logos from "../img/Composição 3.mp4"
+
 
 
 
@@ -93,10 +98,15 @@ useEffect(() => {
         </div>
         </section>
 
-        <section className="hero2  bg-gray-100 rounded-2xl mt-[-150px]">
+        <section className="hero2  bg-white rounded-2xl mt-[-150px]">
             <div className="part1 ">
-              <h1 className="nelius text-xl font-semibold text-black textp1 
-              ">Construa uma marca <p className=" font-bold animation-text">reconhecida e lembrada</p></h1>
+              <h1 className="nelius text-xl font-semibold text-black textp1">
+                Construa uma marca{" "}
+                <span className="font-bold animation-text animation">
+                  reconhecida e lembrada
+                </span>
+              </h1>
+
               <h2 className=" text textp1 description luf">Criamos identidades visuais estratégicas que posicionam sua empresa com <p className="font-bold">autoridade, diferenciação e visão de crescimento.</p></h2>
               <div className="flex justify-center items-center">
                   <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center"
@@ -133,7 +143,7 @@ useEffect(() => {
 
         </section>
 
-        <section className="part2 bg-gray-100 p-2 " ref={secaoRef}
+        <section className="part2 bg-white p-2 mb-50" ref={secaoRef}
         id="marcas"
         >
             <div className="flex flex-col justify-center items-center">
@@ -324,6 +334,21 @@ useEffect(() => {
             
               </Swiper>
             </div>
+
+          <div>
+            <h1 className="luf">Nosso clientes...</h1>
+                <div className="w-full flex justify-center items-center flex-col">
+                  <video
+                    src={logos}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className=""
+                  />
+                </div>
+        </div>
+
         </section>
 
         <section className="hero3 flex justify-center relative mt-10 ceu"
@@ -624,12 +649,12 @@ useEffect(() => {
             <SwiperSlide className="">
 
               <div className="slide rounded-xl p-2 mt-5" >
-                <img src={lucas} className="img"></img>
+                <img src={mt} className="img"></img>
                 <div className="w-full">
 
-                  <p className="w-[270px] h-[170px] pub text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+                  <p className="w-[270px] h-[170px] pub text-sm mt-2">"O atendimento foi excelente do início ao fim. A Porto Identidade Visual entendeu exatamente o que eu precisava e traduziu isso em um projeto profissional, criativo e bem alinhado com a proposta da minha marca. Comunicação clara, prazos respeitados e um resultado acima do esperado."</p>
 
-                  <h1 className="luf font-bold">Lucas Porto</h1>
+                  <h1 className="luf font-bold">Matheus Borges</h1>
 
                 </div>
 
@@ -641,11 +666,11 @@ useEffect(() => {
             <SwiperSlide>
 
                <div className="slide rounded-xl p-2 mt-5">
-                 <img src={lucas} className="img"></img>
+                 <img src={sla} className="img"></img>
     
-                  <p className="italic w-[270px] h-[170px] pub  text-sm mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+                  <p className="italic w-[270px] h-[170px] pub  text-sm mt-2">"Desde o primeiro contato, o processo foi muito organizado e transparente. O cuidado com os detalhes e a preocupação em entregar algo que realmente representasse a empresa fizeram toda a diferença. O resultado final ficou moderno, funcional e muito bem pensado.!"</p>
 
-                  <h1 className="luf font-bold">Lucas Porto</h1>
+                  <h1 className="luf font-bold">Yuri Mirando</h1>
 
                </div>
 
@@ -656,7 +681,7 @@ useEffect(() => {
                <div className="slide rounded-xl p-2 mt-5">
                  <img src={Leo} className="img"></img>
                  
-                  <p className="italic w-[270px] h-[170px] pub text-sm  mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nulla iusto obcaecati aliquam magnam aperiam, molestiae optio. Quia deserunt quis itaque ipsum! Perspiciatis tenetur cumque eligendi! Praesentium id quod facilis!"</p>
+                  <p className="italic w-[270px] h-[170px] pub text-sm  mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
 
                   <h1 className="luf font-bold">Leonardo Porto</h1>
 
@@ -675,20 +700,47 @@ useEffect(() => {
               <h1 className="nelius text-4xl text-black">Nossas Soluções</h1>
             </div>
           
-          <section className="hero4-2 rounded-t-2xl flex flex-wrap justify-center items-center bg-black">
+          <section className="hero4-2 rounded-t-2xl flex justify-center items-center bg-black lg:items-start">
 
-            <div className="w-full flex justify-center items-center flex-col">
+            <div className=" flex flex-col lg:flex-row flex-wrap justify-center items-center lg:items-start">
 
-                <div className="p-4">
-                  <img src={card1} alt="card um"/>
+                <div className="p-4 flex flex-col justify-center items-center">
+                  <img src={card1} alt="card um" className="w-100"/>
+
+                  <a
+                    className="button nelius mt-2"
+                    href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Quero uma criação da marca
+                  </a>
                 </div>
 
-                <div className="p-4">
-                  <img src={card2} alt="card dois"/>
+                <div className="p-4 flex flex-col justify-center items-center">
+                  <img src={card2} alt="card dois" className="w-100"/>
+
+                  <a
+                    className="button nelius mt-2"
+                    href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Quero uma identidade visual
+                  </a>
                 </div>
 
-                <div className="p-4">
-                  <img src={card3} alt="card tres"/>
+                <div className="p-4 flex flex-col justify-center items-center">
+                  <img src={card3} alt="card tres" className="w-100"/>
+
+                  <a
+                    className="button nelius mt-2"
+                    href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Quero um projeto de branding
+                  </a>
                 </div>
 
               
@@ -700,6 +752,7 @@ useEffect(() => {
 
 
         </section>
+
     </body>
   );
 }
