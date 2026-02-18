@@ -111,11 +111,10 @@ useEffect(() => {
 
                 <h1 className="nelius text-xl font-semibold text-black 
                  textp1
-                ">Tenha uma lingugaem visual que <span className="font-bold">realmente venda.</span> </h1>
+                ">Sua imagem precisa trabalhar por você.</h1>
                 <div className="linhaBranco textp1"></div>
 
                 <h2 className=" text textp1 description luf">
-                  <span className="font-bold">Sua imagem precisa trabalhar por você. </span>
                   Uma identidade visual bem construída comunica valor antes mesmo da primeira conversa.
                   Nós estruturamos sua marca para transmitir confiança, autoridade e profissionalismo em cada ponto de contato. 
                 </h2>
