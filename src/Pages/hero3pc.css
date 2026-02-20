@@ -1,0 +1,19 @@
+.hero3pc{
+  width: 100%;
+  position: relative;
+
+  min-height: 1800px;
+  height: auto;
+
+  overflow: hidden;   /* ESSENCIAL */
+}
+
+.linhaHero3pc{
+  width: 1px;
+  height: 1590px;
+}
+
+.a{
+  width: 180vw;
+  height: 100px;
+}

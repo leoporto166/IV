@@ -19,10 +19,10 @@
 
 
 /* FAROL */
-  .farol{
-    margin-top: -65%;
+  .farolpc{
+    margin-top: -50%;
     margin-left: 2%;
-    width: 210px;
+    width: 350px;
   }
 
 
@@ -30,9 +30,9 @@
   position: relative;
 }
 
-.feixe {
+.feixepc {
   position: absolute;
-  top: -570%;        /* ajusta UMA VEZ */
+  top: -520%;        /* ajusta UMA VEZ */
   left: 50%;
   transform: translateY(-50%) translateX(0);
 
@@ -58,7 +58,7 @@
 
 
 /* FEIXE DE LUZ */
-.texto {
+  .texto {
     margin-top: 40px;
     text-align: center;
     color: white;
@@ -68,7 +68,7 @@
 
     animation: aparecer 1.2s ease-out forwards;
     animation-delay: 1.6s; 
-}
+  }
 
 
 
@@ -84,7 +84,7 @@
 }
 
 .texto span {
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.8;
 }
 
@@ -131,7 +131,3 @@
     transform: translateY(0);
   }
 }
-
-
-
-

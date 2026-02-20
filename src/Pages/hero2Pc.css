@@ -1,0 +1,142 @@
+.hero2pc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 400px;
+
+  overflow: hidden; /* ← ESSENCIAL */
+  opacity: 0;
+
+  animation: aparecer 1.2s ease-out forwards;
+  animation-delay: 1.6s;
+  z-index: 90;
+}
+
+
+.part1pc{
+  margin-top: 50px;
+  max-width: 550px;
+
+}
+
+.textp1pc{
+  margin: 0 12%;
+}
+
+.animationpc{
+    animation: textColor 2s ease-out forwards;
+}
+
+.buttonpc{
+    z-index: 100;
+}
+
+.animation-textpc {
+  position: relative;
+  display: inline-block;
+  z-index: 0;          /* cria contexto próprio */
+  margin-left: 6px;
+}
+
+.animation-textpc::before {
+  content: "";
+  position: absolute;
+  inset: -2px -6px;
+  background-color: #4d1d5e;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  z-index: -1;          /* NÃO negativo */
+  pointer-events: none;
+
+  animation: bgGrow 2s ease-out forwards;
+  animation-delay: 3s;
+}
+
+
+.button {
+  position: relative;
+  padding: 20px;
+  background: #000;
+  border-radius: 16px;
+  color: white;
+}
+
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* espessura da borda */
+  background: linear-gradient(90deg, #7a52da, #2909b9);
+  border-radius: 16px;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+
+
+  
+  .linha{
+
+    margin-top: 8px;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(to right, white, white, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), white ,white);
+
+}
+
+  .linhaBranco{
+
+    margin-top: 8px;
+    width: 75%;
+    height: 4px;
+    background: linear-gradient(to right, rgb(55, 1, 80), rgb(55, 1, 80), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(55, 1, 80) ,rgb(55, 1, 80));
+
+}
+
+
+.description{
+
+  width: 70%;
+  margin-top: 10px;
+  
+
+}
+
+.textpc{
+
+  color: #000000;
+  font-size: 16px;
+
+}
+
+@keyframes textColor {
+  to {
+    color: rgb(255, 255, 255);
+  }
+}
+
+/* FUNDO */
+@keyframes bgGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+/*Parte Artes*/
+
+.part2{
+
+  height: 2300px;
+
+
+}
