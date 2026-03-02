@@ -7,7 +7,9 @@ import "./hero5.css"
 import "./SegPc.css"
 import "./hero2Pc.css"
 import "./hero3Pc.css"
+import "./hero4Pc.css"
 import "./hero5Pc.css"
+import "./footerPc.css"
 import farol from "../img/farol3.png";
 import Logo from "../img/logoPorto2.png"
 
@@ -47,6 +49,9 @@ import card2 from "../img/card2.png"
 import card3 from "../img/card3.png"
 
 import logos from "../img/Composição 3.mp4"
+
+import { FaInstagram } from "react-icons/fa";
+import logo from "../img/LogoPorto1.png"
 
 
 
@@ -772,6 +777,28 @@ useEffect(() => {
 
 
             </section>
+
+                          <div className="linhaFooter"></div>
+
+              <footer className='relative bg-black'>
+                        <div className='w-full flex justify-center items-center'>
+        
+                            <img src={logo} alt="Escudo Goias" className='absolute w-[150px] z-30 mt-[-40px]'></img>
+        
+                        </div>
+                    <div className='w-full flex justify-center items-center mt-20 '>
+                            <div className='w-11/12 text-white flex flex-col justify-center items-center mt-4'>
+                                <h1 className='text-xl font-bold luf'>REDES SOCIAIS</h1>
+                                <div className='flex justify-center items-center  mt-2 mb-10'>
+                                    <a href="https://www.instagram.com/portoavl/" target="_blank">
+                                      <FaInstagram className="text-violet-300 cursor-pointer" size={40}></FaInstagram>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+              </footer>
+
+            
           </div>
 
         ) : (
@@ -793,7 +820,7 @@ useEffect(() => {
 
               <section className="hero2pc  rounded-2xl mt-[-150px] flex bg-white">
                 <div className="flex">
-                  <div className="part1pc">
+                  <div className="part1pc mr-10">
                     <h1 className="nelius text-2xl font-semibold text-black textp1pc">
                       Construa uma marca{" "}
                       <span className="font-bold animation-textpc animationpc">
@@ -834,7 +861,7 @@ useEffect(() => {
               <div className="flex flex-col justify-center items-center">
 
 
-              <section className="flex w-full h-[700px] justify-between mt-10 bg-gray-100/30 rounded-2xl">
+              <section className="flex w-full h-[700px] justify-between mt-10 bg-gray-200/60 rounded-2xl">
 
                 <div className="flex items-center pl-10 w-4/12">
                   <img src={logo1} className="w-50"></img>
@@ -849,7 +876,7 @@ useEffect(() => {
                 onSwiper={(swiper) => {
                   swiperRefs.current[1] = swiper;
                 }}
-                className=" w-10/12 h-[820px] mb-[30px]"
+                className=" w-10/12 h-[840px] mb-[30px]"
 
 
                 >
@@ -888,7 +915,7 @@ useEffect(() => {
 
               </section>
 
-               <section className="flex w-full h-[700px] justify-between mt-10 bg-gray-100/30 rounded-2xl">
+               <section className="flex w-full h-[700px] justify-between mt-10 bg-gray-200/60  rounded-2xl">
 
                 <div className="flex items-center pl-10 w-4/12">
                   <img src={logo2} className="w-50"></img>
@@ -903,7 +930,7 @@ useEffect(() => {
                 onSwiper={(swiper) => {
                   swiperRefs.current[1] = swiper;
                 }}
-                className=" w-10/12 h-[820px] mb-[30px]"
+                className=" w-10/12 h-[840px] mb-[30px]"
 
 
                 >
@@ -942,7 +969,7 @@ useEffect(() => {
 
               </section>
 
-               <section className="flex w-full h-[700px] justify-between mt-10 bg-gray-100/30 rounded-2xl">
+               <section className="flex w-full h-[700px] justify-between mt-10 bg-gray-200/60  rounded-2xl">
 
                 <div className="flex items-center pl-10 w-4/12">
                   <img src={logo3} className="w-50"></img>
@@ -957,7 +984,7 @@ useEffect(() => {
                 onSwiper={(swiper) => {
                   swiperRefs.current[1] = swiper;
                 }}
-                className=" w-10/12 h-[820px] mb-[30px]"
+                className=" w-10/12 h-[840px] mb-[30px]"
 
 
                 >
@@ -1351,19 +1378,53 @@ useEffect(() => {
                     </div>
 
                   </SwiperSlide>
+
+                  <SwiperSlide className="">
+
+                    <div className="slidepc rounded-xl p-2 mt-5" >
+                      <img src={mt} className="imgpc"></img>
+                      <div className="w-full">
+
+                        <p className="w-[300px]  h-[230px] pub text-md mt-2">"Trabalhar com a Porto Identidade Visual foi uma experiência extremamente positiva. Desde o primeiro contato, ficou claro o cuidado em entender a essência da minha marca. O processo foi organizado, a comunicação sempre objetiva e o resultado final superou minhas expectativas, unindo criatividade, estratégia e profissionalismo."</p>
+
+                        <h1 className="luf font-bold">Matheus Borges</h1>
+
+                      </div>
+
+                      
+                    </div>
+
+                  </SwiperSlide>
+
+                  <SwiperSlide className="">
+
+                    <div className="slidepc rounded-xl p-2 mt-5" >
+                      <img src={mt} className="imgpc"></img>
+                      <div className="w-full">
+
+                        <p className="w-[300px]  h-[230px] pub text-md mt-2">"A Porto Identidade Visual entregou muito mais do que eu esperava. O projeto foi desenvolvido com atenção aos detalhes, respeito aos prazos e uma visão criativa que realmente fez a diferença para a minha marca. Todo o atendimento foi ágil e transparente, transmitindo confiança em cada etapa do processo."</p>
+
+                        <h1 className="luf font-bold">Matheus Borges</h1>
+
+                      </div>
+
+                      
+                    </div>
+
+                  </SwiperSlide>
                   
                 </Swiper>
 
                       
               </section>
 
-              <section className="hero4 mt-[-5px] " id="soluções">
+              <section className="hero4pc mt-[-5px] " id="soluções">
 
                   <div className="w-full ml-18 mt-4">
                     <h1 className="nelius text-4xl text-black">Nossas Soluções</h1>
                   </div>
                 
-                <section className="hero4-2 rounded-t-2xl flex justify-center items-center bg-black lg:items-start">
+                <section className="hero4-2pc rounded-t-2xl flex justify-center items-center bg-black lg:items-start">
 
                   <div className=" flex flex-col lg:flex-row flex-wrap justify-center items-center lg:items-start">
 
@@ -1415,6 +1476,26 @@ useEffect(() => {
 
 
               </section>
+
+              <div className="linhaFooter"></div>
+
+              <footer className='relative bg-black'>
+                        <div className='w-full flex justify-center items-center'>
+        
+                            <img src={logo} alt="Escudo Goias" className='absolute w-[150px] z-30 mt-[-40px]'></img>
+        
+                        </div>
+                    <div className='w-full flex justify-center items-center mt-20 '>
+                            <div className='w-11/12 text-white flex flex-col justify-center items-center mt-4'>
+                                <h1 className='text-xl font-bold luf'>REDES SOCIAIS</h1>
+                                <div className='flex justify-center items-center  mt-2 mb-10'>
+                                    <a href="https://www.instagram.com/portoavl/" target="_blank">
+                                      <FaInstagram className="text-violet-300 cursor-pointer" size={40}></FaInstagram>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+              </footer>
           </div>
         )}
 
