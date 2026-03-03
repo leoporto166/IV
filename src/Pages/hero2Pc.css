@@ -12,7 +12,7 @@
 
   animation: aparecer 1.2s ease-out forwards;
   animation-delay: 1.6s;
-  z-index: 90;
+  z-index: 200;
 }
 
 

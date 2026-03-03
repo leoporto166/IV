@@ -1,6 +1,6 @@
 
 
-.hero {
+.heropc {
   background: radial-gradient(circle at top, #270233, #2d0b3f, #060407);
   display: flex;
   flex-direction: column;
@@ -14,6 +14,8 @@
   position: relative;
   width: 100%;
   max-width: 100%;
+
+  z-index: 200;
 
 }
 

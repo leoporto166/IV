@@ -53,6 +53,8 @@ import logos from "../img/Composição 3.mp4"
 import { FaInstagram } from "react-icons/fa";
 import logo from "../img/LogoPorto1.png"
 
+import { FaWhatsapp } from "react-icons/fa";
+
 
 
 
@@ -134,10 +136,10 @@ useEffect(() => {
 
                   <h2 className=" text textp1 description luf">Criamos identidades visuais estratégicas que posicionam sua empresa com <p className="font-bold">autoridade, diferenciação e visão de crescimento.</p></h2>
                   <div className="flex justify-center items-center">
-                      <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center"
+                      <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982616305" target="_blank"
                       >
-                          Começar meu projeto
+                          Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                   </div>
                 </div>
@@ -155,11 +157,10 @@ useEffect(() => {
                   </h2>
 
                   <div className="flex justify-center items-center">
-                      <a className=" animate-gradient p-3 text-sm font-semibold not-target:not-visited:rounded-2xl mt-2 b-2 shadow-white/15 shadow-lg cursor-pointer hover:mt-[-4px] hover:mb-[5px] transition-all duration-500 button luf w-60 text-center"
+                      <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982616305" target="_blank"
                       >
-                          Começar meu projeto
-                  
+                          Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                   </div>
 
@@ -620,10 +621,10 @@ useEffect(() => {
                     </div>
                     </div>
                     <div className="mt-10 button">
-                        <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20"
+                        <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5"
                         href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                         >
-                          COMEÇAR MEU PROJETO
+                          COMEÇAR MEU PROJETO <FaWhatsapp size={40}></FaWhatsapp>
                         </a>
                     </div>
                   </motion.div>
@@ -708,7 +709,7 @@ useEffect(() => {
                     
                       <p className="italic w-[270px] h-[170px] pub text-sm  mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
 
-                      <h1 className="luf font-bold">Leonardo Porto</h1>
+                      <h1 className="luf font-bold">Leonardo</h1>
 
                   </div>
 
@@ -733,12 +734,13 @@ useEffect(() => {
                       <img src={card1} alt="card um" className="w-100"/>
 
                       <a
-                        className="button nelius mt-2"
+                        className="button nelius mt-2 flex justify-center items-center
+                        gap-3"
                         href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Quero uma criação da marca
+                        Quero uma criação da marca <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                     </div>
 
@@ -746,12 +748,12 @@ useEffect(() => {
                       <img src={card2} alt="card dois" className="w-100"/>
 
                       <a
-                        className="button nelius mt-2"
+                        className="button nelius mt-2 flex justify-center items-center gap-3"
                         href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Quero uma identidade visual
+                        Quero uma identidade visual <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                     </div>
 
@@ -759,12 +761,12 @@ useEffect(() => {
                       <img src={card3} alt="card tres" className="w-100"/>
 
                       <a
-                        className="button nelius mt-2"
+                        className="button nelius mt-2 flex justify-centeri items-center gap-3"
                         href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Quero um projeto de branding
+                        Quero um projeto de branding  <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                     </div>
 
@@ -778,7 +780,7 @@ useEffect(() => {
 
             </section>
 
-                          <div className="linhaFooter"></div>
+            <div className="linhaFooter"></div>
 
               <footer className='relative bg-black'>
                         <div className='w-full flex justify-center items-center'>
@@ -789,9 +791,9 @@ useEffect(() => {
                     <div className='w-full flex justify-center items-center mt-20 '>
                             <div className='w-11/12 text-white flex flex-col justify-center items-center mt-4'>
                                 <h1 className='text-xl font-bold luf'>REDES SOCIAIS</h1>
-                                <div className='flex justify-center items-center  mt-2 mb-10'>
+                                <div className='flex justify-center items-center  mt-2 mb-10 '>
                                     <a href="https://www.instagram.com/portoavl/" target="_blank">
-                                      <FaInstagram className="text-violet-300 cursor-pointer" size={40}></FaInstagram>
+                                      <FaInstagram className="text-violet-300 cursor-pointer hover:text-white transition-all duration-600" size={40}></FaInstagram>
                                     </a>
                                 </div>
                             </div>
@@ -803,7 +805,7 @@ useEffect(() => {
 
         ) : (
             <div>
-              <section className="hero">
+              <section className="heropc">
                 <div className="farol-wrapper">
                     <img className="farolpc" src={farol} />
                     <div className="feixepc"></div>
@@ -844,10 +846,10 @@ useEffect(() => {
 
                               <section className="buttonpc">
                   <div className="flex justify-center items-center">
-                      <a className=" p-3 text-md font-bold rounded-2xl b-2 cursor-pointer button luf text-center mt-10 w-100"
+                      <a className=" p-3 text-md font-bold rounded-2xl b-2 cursor-pointer button luf text-center mt-10 w-100 flex justify-center items-center gap-3"
                       href="https://wa.me/62982616305" target="_blank"
                       >
-                          Começar meu projeto
+                          Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                   </div>  
               </section>
@@ -1045,9 +1047,9 @@ useEffect(() => {
 
               >
 
-              <div className="stars stars-1"></div>
-              <div className="stars stars-2"></div>
-              <div className="stars stars-3"></div>
+              <div className="starspc stars-1pc"></div>
+              <div className="starspc stars-2pc"></div>
+              <div className="starspc stars-3pc"></div>
 
 
                   {/* Linha */}
@@ -1284,10 +1286,10 @@ useEffect(() => {
                       </div>
                       </div>
                       <div className="mt-10 button">
-                          <a className=" text-5xl font-bold rounded-2xl cursor-pointer luf px-20"
+                          <a className=" text-5xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5"
                           href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                           >
-                            COMEÇAR MEU PROJETO
+                            COMEÇAR MEU PROJETO <FaWhatsapp size={50}></FaWhatsapp>
                           </a>
                       </div>
                     </motion.div>
@@ -1432,12 +1434,13 @@ useEffect(() => {
                         <img src={card1} alt="card um" className="w-100"/>
 
                         <a
-                          className="button nelius mt-2"
+                          className="button nelius mt-2 flex justify-center items-center
+                          gap-3"
                           href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Quero uma criação da marca
+                          Quero uma criação da marca <FaWhatsapp size={30}></FaWhatsapp>
                         </a>
                       </div>
 
@@ -1445,12 +1448,13 @@ useEffect(() => {
                         <img src={card2} alt="card dois" className="w-100"/>
 
                         <a
-                          className="button nelius mt-2"
+                          className="button nelius mt-2 flex justify-center
+                           items-center gap-3"
                           href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Quero uma identidade visual
+                          Quero uma identidade visual <FaWhatsapp size={30}></FaWhatsapp>
                         </a>
                       </div>
 
@@ -1458,12 +1462,12 @@ useEffect(() => {
                         <img src={card3} alt="card tres" className="w-100"/>
 
                         <a
-                          className="button nelius mt-2"
+                          className="button nelius mt-2 flex  justify-center items-center gap-3"
                           href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Quero um projeto de branding
+                          Quero um projeto de branding <FaWhatsapp size={30}></FaWhatsapp>
                         </a>
                       </div>
 
@@ -1490,7 +1494,7 @@ useEffect(() => {
                                 <h1 className='text-xl font-bold luf'>REDES SOCIAIS</h1>
                                 <div className='flex justify-center items-center  mt-2 mb-10'>
                                     <a href="https://www.instagram.com/portoavl/" target="_blank">
-                                      <FaInstagram className="text-violet-300 cursor-pointer" size={40}></FaInstagram>
+                                      <FaInstagram className="text-violet-300 cursor-pointer hover:text-white transition-all duration-600" size={40}></FaInstagram>
                                     </a>
                                 </div>
                             </div>
