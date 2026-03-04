@@ -40,6 +40,9 @@ import lucas from "../img/Lucas.jpg"
 import Leo from "../img/Leo.jpeg"
 import sla from "../img/sla.jpeg"
 import mt from "../img/mt.jpeg"
+import mth from "../img/Mth.jpeg"
+import mp from "../img/mp.jpeg"
+import video from "../img/Composição 3.mp4"
 
 
 import { Menu } from "../components/menu";
@@ -47,8 +50,6 @@ import { Menu } from "../components/menu";
 import card1 from "../img/card1.png"
 import card2 from "../img/card2.png"
 import card3 from "../img/card3.png"
-
-import logos from "../img/Composição 3.mp4"
 
 import { FaInstagram } from "react-icons/fa";
 import logo from "../img/LogoPorto1.png"
@@ -110,7 +111,7 @@ useEffect(() => {
         {isDesktop ? (
 
            <div>
-              <section className="hero">
+            <section className="hero">
                 <div className="farol-wrapper">
                     <img className="farol" src={farol} />
                     <div className="feixe"></div>
@@ -123,9 +124,9 @@ useEffect(() => {
                   <p className="luf text-sm">Criamos identidades visuais preparadas <br /> para escalar e se <span className="luf font-extrabold">tornar referência.</span></p>
 
                 </div>
-              </section>
+            </section>
 
-              <section className="hero2  bg-white rounded-2xl mt-[-150px]">
+            <section className="hero2  bg-white rounded-2xl mt-[-150px]">
                 <div className="part1 ">
                   <h1 className="nelius text-xl font-semibold text-black textp1">
                     Construa uma marca{" "}
@@ -137,7 +138,7 @@ useEffect(() => {
                   <h2 className=" text textp1 description luf">Criamos identidades visuais estratégicas que posicionam sua empresa com <p className="font-bold">autoridade, diferenciação e visão de crescimento.</p></h2>
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
-                      href="https://wa.me/62982616305" target="_blank"
+                      href="https://wa.me/62982612708" target="_blank"
                       >
                           Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
@@ -158,7 +159,7 @@ useEffect(() => {
 
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
-                      href="https://wa.me/62982616305" target="_blank"
+                      href="https://wa.me/62982612708" target="_blank"
                       >
                           Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
@@ -167,9 +168,9 @@ useEffect(() => {
                 </section>
         
 
-              </section>
+            </section>
 
-              <section className="part2 bg-white p-2 mb-50" ref={secaoRef}
+            <section className=" bg-white p-2" ref={secaoRef}
               id="marcas"
               >
               <div className="flex flex-col justify-center items-center">
@@ -361,23 +362,23 @@ useEffect(() => {
               </Swiper>
               </div>
 
-            <div>
-            <h1 className="luf text-md">Nosso clientes...</h1>
+            <div className=" marcas">
+            <h1 className="luf text-md">Nossos clientes...</h1>
                 <div className="w-full flex justify-center items-center flex-col">
                    <video
-                    src={logos}
+                    src={video}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-auto"
+                    className="w-full"
                   ></video>
                 </div>
             </div>
 
             </section>
 
-            <section className="hero3 flex justify-center relative mt-10 ceu"
+            <section className="hero3 flex justify-center relative mt-10 ceu "
             id="porto"
 
             >
@@ -620,13 +621,13 @@ useEffect(() => {
                       </h2>
                     </div>
                     </div>
-                    <div className="mt-10 button">
-                        <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5"
-                        href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
-                        >
-                          COMEÇAR MEU PROJETO <FaWhatsapp size={40}></FaWhatsapp>
-                        </a>
-                    </div>
+                    <div className="mt-10 button cursor-pointer">
+                          <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
+                          href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
+                          >
+                            COMEÇAR MEU PROJETO <FaWhatsapp size={40}className="cursor-pointer"></FaWhatsapp>
+                          </a>
+                      </div>
                   </motion.div>
                 </div>           
 
@@ -736,7 +737,7 @@ useEffect(() => {
                       <a
                         className="button nelius mt-2 flex justify-center items-center
                         gap-3"
-                        href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
+                        href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -749,7 +750,7 @@ useEffect(() => {
 
                       <a
                         className="button nelius mt-2 flex justify-center items-center gap-3"
-                        href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
+                        href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -762,7 +763,7 @@ useEffect(() => {
 
                       <a
                         className="button nelius mt-2 flex justify-centeri items-center gap-3"
-                        href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
+                        href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -797,6 +798,13 @@ useEffect(() => {
                                     </a>
                                 </div>
                             </div>
+
+                          
+                        </div>
+
+                        <div className="text-white px-2 luf text-[12px] mt-10">
+                              Emai: <span  className="
+                              ">Portoavlagencia@gmail.com</span>
                         </div>
               </footer>
 
@@ -847,7 +855,7 @@ useEffect(() => {
                               <section className="buttonpc">
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-md font-bold rounded-2xl b-2 cursor-pointer button luf text-center mt-10 w-100 flex justify-center items-center gap-3"
-                      href="https://wa.me/62982616305" target="_blank"
+                      href="https://wa.me/62982612708" target="_blank"
                       >
                           Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
@@ -1026,17 +1034,17 @@ useEffect(() => {
               </section>
               </div>
 
-            <div className="mt-10">
-            <h1 className="luf text-3xl">Nossos clientes...</h1>
+            <div className="mt-2 marcas">
+            <h1 className="luf text-3xl">Nosso clientes...</h1>
                 <div className="flex justify-center items-center flex-col">
-                  <video
-                    src={logos}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-auto"
-                  ></video>
+                   <video
+                      src={video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-auto max-h-screen object-cover "
+                    ></video>
                 </div>
             </div>
 
@@ -1285,11 +1293,11 @@ useEffect(() => {
                         </h2>
                       </div>
                       </div>
-                      <div className="mt-10 button">
-                          <a className=" text-5xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5"
-                          href="https://wa.me/62982616305?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
+                      <div className="mt-10 button cursor-pointer">
+                          <a className=" text-5xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
+                          href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                           >
-                            COMEÇAR MEU PROJETO <FaWhatsapp size={50}></FaWhatsapp>
+                            COMEÇAR MEU PROJETO <FaWhatsapp size={50}className="cursor-pointer"></FaWhatsapp>
                           </a>
                       </div>
                     </motion.div>
@@ -1384,7 +1392,7 @@ useEffect(() => {
                   <SwiperSlide className="">
 
                     <div className="slidepc rounded-xl p-2 mt-5" >
-                      <img src={mt} className="imgpc"></img>
+                      <img src={mth} className="imgpc"></img>
                       <div className="w-full">
 
                         <p className="w-[300px]  h-[230px] pub text-md mt-2">"Trabalhar com a Porto Identidade Visual foi uma experiência extremamente positiva. Desde o primeiro contato, ficou claro o cuidado em entender a essência da minha marca. O processo foi organizado, a comunicação sempre objetiva e o resultado final superou minhas expectativas, unindo criatividade, estratégia e profissionalismo."</p>
@@ -1401,7 +1409,7 @@ useEffect(() => {
                   <SwiperSlide className="">
 
                     <div className="slidepc rounded-xl p-2 mt-5" >
-                      <img src={mt} className="imgpc"></img>
+                      <img src={mp} className="imgpc"></img>
                       <div className="w-full">
 
                         <p className="w-[300px]  h-[230px] pub text-md mt-2">"A Porto Identidade Visual entregou muito mais do que eu esperava. O projeto foi desenvolvido com atenção aos detalhes, respeito aos prazos e uma visão criativa que realmente fez a diferença para a minha marca. Todo o atendimento foi ágil e transparente, transmitindo confiança em cada etapa do processo."</p>
@@ -1436,7 +1444,7 @@ useEffect(() => {
                         <a
                           className="button nelius mt-2 flex justify-center items-center
                           gap-3"
-                          href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
+                          href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -1450,7 +1458,7 @@ useEffect(() => {
                         <a
                           className="button nelius mt-2 flex justify-center
                            items-center gap-3"
-                          href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
+                          href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -1463,7 +1471,7 @@ useEffect(() => {
 
                         <a
                           className="button nelius mt-2 flex  justify-center items-center gap-3"
-                          href="https://wa.me/62985102264?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
+                          href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -1498,6 +1506,10 @@ useEffect(() => {
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                        <div className="text-white px-2 luf text-xl mt-10">
+                              Emai: <span  className="
+                              ">Portoavlagencia@gmail.com</span>
                         </div>
               </footer>
           </div>

@@ -134,9 +134,17 @@
 
 /*Parte Artes*/
 
-.part2{
+.marcas{
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
-  height: 2300px;
+  height: auto;
+
+  overflow: hidden; /* ← ESSENCIAL */
+
+  animation-delay: 1.6s;
+  z-index: 100;
 
 
 }
