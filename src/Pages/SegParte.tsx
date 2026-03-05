@@ -1383,7 +1383,7 @@ useEffect(() => {
                       
                         <p className="w-[300px] h-[230px] pub text-md mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
 
-                        <h1 className="luf font-bold">Leonardo Porto</h1>
+                        <h1 className="luf font-bold">Leonardo</h1>
 
                     </div>
 
@@ -1397,7 +1397,7 @@ useEffect(() => {
 
                         <p className="w-[300px]  h-[230px] pub text-md mt-2">"Trabalhar com a Porto Identidade Visual foi uma experiência extremamente positiva. Desde o primeiro contato, ficou claro o cuidado em entender a essência da minha marca. O processo foi organizado, a comunicação sempre objetiva e o resultado final superou minhas expectativas, unindo criatividade, estratégia e profissionalismo."</p>
 
-                        <h1 className="luf font-bold">Matheus Borges</h1>
+                        <h1 className="luf font-bold">Maria Paula</h1>
 
                       </div>
 
@@ -1414,7 +1414,7 @@ useEffect(() => {
 
                         <p className="w-[300px]  h-[230px] pub text-md mt-2">"A Porto Identidade Visual entregou muito mais do que eu esperava. O projeto foi desenvolvido com atenção aos detalhes, respeito aos prazos e uma visão criativa que realmente fez a diferença para a minha marca. Todo o atendimento foi ágil e transparente, transmitindo confiança em cada etapa do processo."</p>
 
-                        <h1 className="luf font-bold">Matheus Borges</h1>
+                        <h1 className="luf font-bold">Matheus</h1>
 
                       </div>
 
