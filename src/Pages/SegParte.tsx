@@ -28,8 +28,8 @@ import case2Tres from "../img/chico2.png"
 import logo2 from "../img/chicoLogo.png"
 
 import case3 from "../img/conne3.jpeg"
-import case3Dois from "../img/conne1.jpeg"
-import case3Tres from "../img/conne2.jpeg"
+import case3Dois from "../img/conne2.jpeg"
+import case3Tres from "../img/conne1.jpeg"
 import logo3 from "../img/conexasLogo.png"
 
 import { motion } from "framer-motion"
@@ -140,7 +140,8 @@ useEffect(() => {
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982612708" target="_blank"
                       >
-                          Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
+                        <FaWhatsapp size={20}></FaWhatsapp>
+                          Começar meu projeto 
                       </a>
                   </div>
                 </div>
@@ -161,7 +162,8 @@ useEffect(() => {
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982612708" target="_blank"
                       >
-                          Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
+                        <FaWhatsapp size={20}></FaWhatsapp>
+                          Começar meu projeto 
                       </a>
                   </div>
 
@@ -512,7 +514,7 @@ useEffect(() => {
                       <h2 className='luf text-xl text-start max-w-[600px]'>
                         Criamos identidades visuais que não apenas chamam atenção,
                         mas comunicam  valor, posicionamento e confiança. 
-                        Cada marca que passa pela Porto nasce com estratégia, não com sorte.
+                        Cada marca que passa pela Porto Avl nasce com estratégia, não com sorte.
                       </h2>
                     </div>
                     </div>
@@ -615,7 +617,7 @@ useEffect(() => {
                   >
                     <div className="flex flex-col w-12/12 text-white justify-center items-center ">
                     <div className='pl-4'>
-                      <h2 className='text-6xl font-medium nelius text-start mr-3'>Vamos criar algo forte</h2>
+                      <h2 className='text-6xl font-medium nelius text-start mr-3'>Vamos criar uma marca com estrategia</h2>
                       <h2 className='luf text-2xl text-center font-semibold'>
                         Sua marca merece mais do que uma logo bonito.
                       </h2>
@@ -625,7 +627,8 @@ useEffect(() => {
                           <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
                           href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                           >
-                            COMEÇAR MEU PROJETO <FaWhatsapp size={40}className="cursor-pointer"></FaWhatsapp>
+                            <FaWhatsapp size={40}className="cursor-pointer"></FaWhatsapp>
+                            COMEÇAR MEU PROJETO 
                           </a>
                       </div>
                   </motion.div>
@@ -679,7 +682,7 @@ useEffect(() => {
                     <img src={mt} className="img"></img>
                     <div className="w-full">
 
-                      <p className="w-[270px] h-[170px] pub text-sm mt-2">"O atendimento foi excelente do início ao fim. A Porto Identidade Visual entendeu exatamente o que eu precisava e traduziu isso em um projeto profissional, criativo e bem alinhado com a proposta da minha marca. Comunicação clara, prazos respeitados e um resultado acima do esperado."</p>
+                      <p className="w-[250px] h-[170px]  text-sm mt-2">"O atendimento foi excelente do início ao fim. A Porto Identidade Visual entendeu exatamente o que eu precisava e traduziu isso em um projeto profissional, criativo e bem alinhado com a proposta da minha marca. Comunicação clara, prazos respeitados e um resultado acima do esperado."</p>
 
                       <h1 className="luf font-bold">Matheus Borges</h1>
 
@@ -695,9 +698,9 @@ useEffect(() => {
                   <div className="slide rounded-xl p-2 mt-5">
                     <img src={sla} className="img"></img>
         
-                      <p className="italic w-[270px] h-[170px] pub  text-sm mt-2">"Desde o primeiro contato, o processo foi muito organizado e transparente. O cuidado com os detalhes e a preocupação em entregar algo que realmente representasse a empresa fizeram toda a diferença. O resultado final ficou moderno, funcional e muito bem pensado.!"</p>
+                      <p className="w-[250px] h-[170px]  text-sm mt-2">"Desde o primeiro contato, o processo foi muito organizado e transparente. O cuidado com os detalhes e a preocupação em entregar algo que realmente representasse a empresa fizeram toda a diferença. O resultado final ficou moderno, funcional e muito bem pensado.!"</p>
 
-                      <h1 className="luf font-bold">Yuri Mirando</h1>
+                      <h1 className="luf font-bold">Yuri Miranda</h1>
 
                   </div>
 
@@ -708,7 +711,7 @@ useEffect(() => {
                   <div className="slide rounded-xl p-2 mt-5">
                     <img src={Leo} className="img"></img>
                     
-                      <p className="italic w-[270px] h-[170px] pub text-sm  mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
+                      <p className="w-[260px] h-[170px]  text-sm mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
 
                       <h1 className="luf font-bold">Leonardo</h1>
 
@@ -741,7 +744,8 @@ useEffect(() => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Quero uma criação da marca <FaWhatsapp size={20}></FaWhatsapp>
+                        <FaWhatsapp size={20}></FaWhatsapp>
+                        Quero uma criação da marca 
                       </a>
                     </div>
 
@@ -754,7 +758,8 @@ useEffect(() => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Quero uma identidade visual <FaWhatsapp size={20}></FaWhatsapp>
+                        <FaWhatsapp size={20}></FaWhatsapp>
+                        Quero uma identidade visual 
                       </a>
                     </div>
 
@@ -767,7 +772,8 @@ useEffect(() => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Quero um projeto de branding  <FaWhatsapp size={20}></FaWhatsapp>
+                        <FaWhatsapp size={20}></FaWhatsapp>
+                        Quero um projeto de branding  
                       </a>
                     </div>
 
@@ -803,9 +809,22 @@ useEffect(() => {
                         </div>
 
                         <div className="text-white px-2 luf text-[12px] mt-10">
-                              Emai: <span  className="
+                              Email: <span  className="
                               ">Portoavlagencia@gmail.com</span>
                         </div>
+
+                      
+
+                        <div className="text-gray-500 px-2 luf text-[12px] py-2">
+                              <p className="text-white">Site desenvolvido por <a href="https://leoporto166.github.io/Portifolio_Online/" target="_blank">Leonardo Porto</a></p>
+                        </div>
+
+
+                        <div className="text-gray-500 px-2 luf text-[12px] mt-10 py-2">
+                              2026 © PortoAvl <br />
+                              CNPJ: 65.357.601/0001-00
+                        </div>
+                        
               </footer>
 
             
@@ -857,6 +876,7 @@ useEffect(() => {
                       <a className=" p-3 text-md font-bold rounded-2xl b-2 cursor-pointer button luf text-center mt-10 w-100 flex justify-center items-center gap-3"
                       href="https://wa.me/62982612708" target="_blank"
                       >
+                        <FaWhatsapp size={30}></FaWhatsapp>
                           Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                   </div>  
@@ -1184,7 +1204,7 @@ useEffect(() => {
                         <h2 className='luf text-3xl text-start max-w-[600px]'>
                           Criamos identidades visuais que não apenas chamam atenção,
                           mas comunicam  valor, posicionamento e confiança. 
-                          Cada marca que passa pela Porto nasce com estratégia, não com sorte.
+                          Cada marca que passa pela Porto Avl nasce com estratégia, não com sorte.
                         </h2>
                       </div>
                       </div>
@@ -1287,7 +1307,7 @@ useEffect(() => {
                     >
                       <div className="flex flex-col w-12/12 text-white justify-center items-center ">
                       <div className='pl-4'>
-                        <h2 className='text-8xl font-medium nelius text-start mr-3'>Vamos criar algo forte</h2>
+                        <h2 className='text-8xl font-medium nelius text-start mr-3'>vamos criar uma marca com estrategia</h2>
                         <h2 className='luf text-4xl text-center font-semibold'>
                           Sua marca merece mais do que uma logo bonito.
                         </h2>
@@ -1297,7 +1317,8 @@ useEffect(() => {
                           <a className=" text-5xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
                           href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
                           >
-                            COMEÇAR MEU PROJETO <FaWhatsapp size={50}className="cursor-pointer"></FaWhatsapp>
+                            <FaWhatsapp size={50}className="cursor-pointer"></FaWhatsapp>
+                            COMEÇAR MEU PROJETO 
                           </a>
                       </div>
                     </motion.div>
@@ -1352,7 +1373,7 @@ useEffect(() => {
                       <img src={mt} className="imgpc"></img>
                       <div className="w-full">
 
-                        <p className="w-[300px]  h-[230px] pub text-md mt-2">"O atendimento foi excelente do início ao fim. A Porto Identidade Visual entendeu exatamente o que eu precisava e traduziu isso em um projeto profissional, criativo e bem alinhado com a proposta da minha marca. Comunicação clara, prazos respeitados e um resultado acima do esperado."</p>
+                        <p className="w-[280px]  h-[230px] text-md mt-2">"O atendimento foi excelente do início ao fim. A Porto Avl entendeu exatamente o que eu precisava e traduziu isso em um projeto profissional, criativo e bem alinhado com a proposta da minha marca. Comunicação clara, prazos respeitados e um resultado acima do esperado."</p>
 
                         <h1 className="luf font-bold">Matheus Borges</h1>
 
@@ -1368,9 +1389,9 @@ useEffect(() => {
                     <div className="slidepc rounded-xl p-2 mt-5">
                       <img src={sla} className="imgpc"></img>
           
-                        <p className="w-[300px]  h-[230px] pub text-md mt-2">"Desde o primeiro contato, o processo foi muito organizado e transparente. O cuidado com os detalhes e a preocupação em entregar algo que realmente representasse a empresa fizeram toda a diferença. O resultado final ficou moderno, funcional e muito bem pensado.!"</p>
+                        <p className="w-[280px]  h-[230px] text-md mt-2">"Desde o primeiro contato, o processo foi muito organizado e transparente. O cuidado com os detalhes e a preocupação em entregar algo que realmente representasse a empresa fizeram toda a diferença. O resultado final ficou moderno, funcional e muito bem pensado.!"</p>
 
-                        <h1 className="luf font-bold">Yuri Mirando</h1>
+                        <h1 className="luf font-bold">Yuri Miranda</h1>
 
                     </div>
 
@@ -1381,7 +1402,7 @@ useEffect(() => {
                     <div className="slidepc rounded-xl p-2 mt-5">
                       <img src={Leo} className="imgpc"></img>
                       
-                        <p className="w-[300px] h-[230px] pub text-md mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
+                        <p className="w-[280px]  h-[230px] text-md mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
 
                         <h1 className="luf font-bold">Leonardo</h1>
 
@@ -1395,9 +1416,9 @@ useEffect(() => {
                       <img src={mth} className="imgpc"></img>
                       <div className="w-full">
 
-                        <p className="w-[300px]  h-[230px] pub text-md mt-2">"Trabalhar com a Porto Identidade Visual foi uma experiência extremamente positiva. Desde o primeiro contato, ficou claro o cuidado em entender a essência da minha marca. O processo foi organizado, a comunicação sempre objetiva e o resultado final superou minhas expectativas, unindo criatividade, estratégia e profissionalismo."</p>
+                        <p className="w-[290px]  h-[230px] text-md mt-2">"Trabalhar com a Porto Avl foi uma experiência extremamente positiva. Desde o primeiro contato, ficou claro o cuidado em entender a essência da minha marca. O processo foi organizado, a comunicação sempre objetiva e o resultado final superou minhas expectativas, unindo criatividade, estratégia e profissionalismo."</p>
 
-                        <h1 className="luf font-bold">Maria Paula</h1>
+                        <h1 className="luf font-bold">Maria Paulla</h1>
 
                       </div>
 
@@ -1412,7 +1433,7 @@ useEffect(() => {
                       <img src={mp} className="imgpc"></img>
                       <div className="w-full">
 
-                        <p className="w-[300px]  h-[230px] pub text-md mt-2">"A Porto Identidade Visual entregou muito mais do que eu esperava. O projeto foi desenvolvido com atenção aos detalhes, respeito aos prazos e uma visão criativa que realmente fez a diferença para a minha marca. Todo o atendimento foi ágil e transparente, transmitindo confiança em cada etapa do processo."</p>
+                        <p className="w-[280px]  h-[230px] text-md mt-2">"A Porto Avl entregou muito mais do que eu esperava. O projeto foi desenvolvido com atenção aos detalhes, respeito aos prazos e uma visão criativa que realmente fez a diferença para a minha marca. Todo o atendimento foi ágil e transparente, transmitindo confiança em cada etapa do processo."</p>
 
                         <h1 className="luf font-bold">Matheus</h1>
 
@@ -1448,7 +1469,8 @@ useEffect(() => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Quero uma criação da marca <FaWhatsapp size={30}></FaWhatsapp>
+                          <FaWhatsapp size={30}></FaWhatsapp>
+                          Quero uma criação da marca 
                         </a>
                       </div>
 
@@ -1462,7 +1484,8 @@ useEffect(() => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Quero uma identidade visual <FaWhatsapp size={30}></FaWhatsapp>
+                          <FaWhatsapp size={30}></FaWhatsapp>
+                          Quero uma identidade visual 
                         </a>
                       </div>
 
@@ -1475,7 +1498,8 @@ useEffect(() => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Quero um projeto de branding <FaWhatsapp size={30}></FaWhatsapp>
+                          <FaWhatsapp size={30}></FaWhatsapp>
+                          Quero um projeto de branding 
                         </a>
                       </div>
 
@@ -1507,9 +1531,18 @@ useEffect(() => {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-white px-2 luf text-xl mt-10">
+                        <div className="text-white px-2 luf text-md mt-10">
                               Emai: <span  className="
                               ">Portoavlagencia@gmail.com</span>
+                        </div>
+                        <div className="text-gray-500 px-2 luf text-md">
+                              <p className="text-white">Site desenvolvido por <a href="https://leoporto166.github.io/Portifolio_Online/" target="_blank">Leonardo Porto</a></p>
+                        </div>
+
+
+                        <div className="text-gray-500 px-2 luf text-sm mt-10 py-2">
+                              2026 © PortoAvl <br />
+                              CNPJ: 65.357.601/0001-00
                         </div>
               </footer>
           </div>
