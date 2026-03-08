@@ -139,6 +139,7 @@ useEffect(() => {
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982612708" target="_blank"
+                      onclick="fbq('track', 'Contact')"
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                           Começar meu projeto 
@@ -161,6 +162,7 @@ useEffect(() => {
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982612708" target="_blank"
+                      onclick="fbq('track', 'Contact')"
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                           Começar meu projeto 
@@ -626,6 +628,7 @@ useEffect(() => {
                     <div className="mt-10 button cursor-pointer">
                           <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
                           href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
+                          onclick="fbq('track', 'Contact')"
                           >
                             <FaWhatsapp size={40}className="cursor-pointer"></FaWhatsapp>
                             COMEÇAR MEU PROJETO 
@@ -682,7 +685,7 @@ useEffect(() => {
                     <img src={mt} className="img"></img>
                     <div className="w-full">
 
-                      <p className="w-[250px] h-[170px]  text-sm mt-2">"O atendimento foi excelente do início ao fim. A Porto Identidade Visual entendeu exatamente o que eu precisava e traduziu isso em um projeto profissional, criativo e bem alinhado com a proposta da minha marca. Comunicação clara, prazos respeitados e um resultado acima do esperado."</p>
+                      <p className="w-[250px] h-[180px]  text-sm mt-2">"O atendimento foi excelente do início ao fim. A Porto Avl entendeu exatamente o que eu precisava e traduziu isso em um projeto profissional, criativo e bem alinhado com a proposta da minha marca. Comunicação clara, prazos respeitados e um resultado acima do esperado."</p>
 
                       <h1 className="luf font-bold">Matheus Borges</h1>
 
@@ -698,7 +701,7 @@ useEffect(() => {
                   <div className="slide rounded-xl p-2 mt-5">
                     <img src={sla} className="img"></img>
         
-                      <p className="w-[250px] h-[170px]  text-sm mt-2">"Desde o primeiro contato, o processo foi muito organizado e transparente. O cuidado com os detalhes e a preocupação em entregar algo que realmente representasse a empresa fizeram toda a diferença. O resultado final ficou moderno, funcional e muito bem pensado.!"</p>
+                      <p className="w-[250px] h-[180px]  text-sm mt-2">"Desde o primeiro contato, o processo foi muito organizado e transparente. O cuidado com os detalhes e a preocupação em entregar algo que realmente representasse a empresa fizeram toda a diferença. O resultado final ficou moderno, funcional e muito bem pensado.!"</p>
 
                       <h1 className="luf font-bold">Yuri Miranda</h1>
 
@@ -711,7 +714,7 @@ useEffect(() => {
                   <div className="slide rounded-xl p-2 mt-5">
                     <img src={Leo} className="img"></img>
                     
-                      <p className="w-[260px] h-[170px]  text-sm mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
+                      <p className="w-[260px] h-[180px]  text-sm mt-2">"A experiência foi extremamente positiva. O atendimento é próximo, atencioso e passa muita segurança durante todo o desenvolvimento do projeto. O trabalho entregue superou as expectativas, mostrando profissionalismo, criatividade e um domínio muito forte de identidade visual."</p>
 
                       <h1 className="luf font-bold">Leonardo</h1>
 
@@ -742,7 +745,8 @@ useEffect(() => {
                         gap-3"
                         href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer" 
+                        onclick="fbq('track', 'Contact')"
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                         Quero uma criação da marca 
@@ -757,6 +761,7 @@ useEffect(() => {
                         href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onclick="fbq('track', 'Contact')"
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                         Quero uma identidade visual 
@@ -771,6 +776,7 @@ useEffect(() => {
                         href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onclick="fbq('track', 'Contact')"
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                         Quero um projeto de branding  
@@ -816,7 +822,7 @@ useEffect(() => {
                       
 
                         <div className="text-gray-500 px-2 luf text-[12px] py-2">
-                              <p className="text-white">Site desenvolvido por <a href="https://leoporto166.github.io/Portifolio_Online/" target="_blank">Leonardo Porto</a></p>
+                              <p className="text-white">Site desenvolvido por <a href="https://leoporto166.github.io/Portifolio_Online/" target="_blank">Leonardo P.</a></p>
                         </div>
 
 
@@ -874,7 +880,7 @@ useEffect(() => {
                               <section className="buttonpc">
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-md font-bold rounded-2xl b-2 cursor-pointer button luf text-center mt-10 w-100 flex justify-center items-center gap-3"
-                      href="https://wa.me/62982612708" target="_blank"
+                      href="https://wa.me/62982612708" target="_blank" onclick="fbq('track', 'Contact')"
                       >
                         <FaWhatsapp size={30}></FaWhatsapp>
                           Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
@@ -1315,7 +1321,7 @@ useEffect(() => {
                       </div>
                       <div className="mt-10 button cursor-pointer">
                           <a className=" text-5xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
-                          href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
+                          href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank" onclick="fbq('track', 'Contact')"
                           >
                             <FaWhatsapp size={50}className="cursor-pointer"></FaWhatsapp>
                             COMEÇAR MEU PROJETO 
@@ -1468,6 +1474,7 @@ useEffect(() => {
                           href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                           target="_blank"
                           rel="noopener noreferrer"
+                          onclick="fbq('track', 'Contact')"
                         >
                           <FaWhatsapp size={30}></FaWhatsapp>
                           Quero uma criação da marca 
@@ -1483,6 +1490,7 @@ useEffect(() => {
                           href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                           target="_blank"
                           rel="noopener noreferrer"
+                          onclick="fbq('track', 'Contact')"
                         >
                           <FaWhatsapp size={30}></FaWhatsapp>
                           Quero uma identidade visual 
@@ -1497,6 +1505,7 @@ useEffect(() => {
                           href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                           target="_blank"
                           rel="noopener noreferrer"
+                          onclick="fbq('track', 'Contact')"
                         >
                           <FaWhatsapp size={30}></FaWhatsapp>
                           Quero um projeto de branding 
@@ -1532,11 +1541,11 @@ useEffect(() => {
                             </div>
                         </div>
                         <div className="text-white px-2 luf text-md mt-10">
-                              Emai: <span  className="
+                              Email: <span  className="
                               ">Portoavlagencia@gmail.com</span>
                         </div>
                         <div className="text-gray-500 px-2 luf text-md">
-                              <p className="text-white">Site desenvolvido por <a href="https://leoporto166.github.io/Portifolio_Online/" target="_blank">Leonardo Porto</a></p>
+                              <p className="text-white">Site desenvolvido por <a href="https://leoporto166.github.io/Portifolio_Online/" target="_blank">Leonardo P.</a></p>
                         </div>
 
 
