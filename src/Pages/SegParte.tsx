@@ -1089,20 +1089,6 @@ useEffect(() => {
               </section>
               </div>
 
-            <div className="mt-2 marcas">
-            <h1 className="luf text-3xl">Nosso clientes...</h1>
-                <div className="flex justify-center items-center flex-col">
-                   <video
-                      src={video}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-auto max-h-screen object-cover "
-                    ></video>
-                </div>
-            </div>
-
               </section>
 
               <section className="hero3pc flex justify-center relative mt-10 ceu"
