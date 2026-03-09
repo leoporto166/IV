@@ -139,7 +139,11 @@ useEffect(() => {
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982612708" target="_blank"
-                      onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                           Começar meu projeto 
@@ -162,7 +166,11 @@ useEffect(() => {
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-sm font-bold rounded-2xl mt-2 b-2  cursor-pointer button luf w-60 text-center flex justify-center items-center gap-3"
                       href="https://wa.me/62982612708" target="_blank"
-                      onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                           Começar meu projeto 
@@ -628,7 +636,11 @@ useEffect(() => {
                     <div className="mt-10 button cursor-pointer">
                           <a className=" text-3xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
                           href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank"
-                          onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                           >
                             <FaWhatsapp size={40}className="cursor-pointer"></FaWhatsapp>
                             COMEÇAR MEU PROJETO 
@@ -746,7 +758,11 @@ useEffect(() => {
                         href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                         target="_blank"
                         rel="noopener noreferrer" 
-                        onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                         Quero uma criação da marca 
@@ -761,7 +777,11 @@ useEffect(() => {
                         href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                         Quero uma identidade visual 
@@ -776,7 +796,11 @@ useEffect(() => {
                         href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                       >
                         <FaWhatsapp size={20}></FaWhatsapp>
                         Quero um projeto de branding  
@@ -880,7 +904,12 @@ useEffect(() => {
                               <section className="buttonpc">
                   <div className="flex justify-center items-center">
                       <a className=" p-3 text-md font-bold rounded-2xl b-2 cursor-pointer button luf text-center mt-10 w-100 flex justify-center items-center gap-3"
-                      href="https://wa.me/62982612708" target="_blank" onclick="fbq('track', 'Contact')"
+                      href="https://wa.me/62982612708" target="_blank"                        
+                      onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                       >
                         <FaWhatsapp size={30}></FaWhatsapp>
                           Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
@@ -1321,7 +1350,12 @@ useEffect(() => {
                       </div>
                       <div className="mt-10 button cursor-pointer">
                           <a className=" text-5xl font-bold rounded-2xl cursor-pointer luf px-20 flex justify-center items-center gap-5 "
-                          href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank" onclick="fbq('track', 'Contact')"
+                          href="https://wa.me/62982612708?text=Olá%20estou%20de%20interessado%20no%20serviço%20PROJETO E BRANDING" target="_blank" 
+                          onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                           >
                             <FaWhatsapp size={50}className="cursor-pointer"></FaWhatsapp>
                             COMEÇAR MEU PROJETO 
@@ -1474,7 +1508,11 @@ useEffect(() => {
                           href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20cria%C3%A7%C3%A3o%20da%20marca"
                           target="_blank"
                           rel="noopener noreferrer"
-                          onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                         >
                           <FaWhatsapp size={30}></FaWhatsapp>
                           Quero uma criação da marca 
@@ -1490,7 +1528,11 @@ useEffect(() => {
                           href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20na%20identidade%20visual"
                           target="_blank"
                           rel="noopener noreferrer"
-                          onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                         >
                           <FaWhatsapp size={30}></FaWhatsapp>
                           Quero uma identidade visual 
@@ -1505,7 +1547,11 @@ useEffect(() => {
                           href="https://wa.me/62982612708?text=Ol%C3%A1,%20estou%20interessado%20no%20projeto%20de%20branding"
                           target="_blank"
                           rel="noopener noreferrer"
-                          onclick="fbq('track', 'Contact')"
+                       onClick={() => {
+                          if (window.fbq) {
+                            window.fbq('track', 'Contact');
+                          }
+                        }}
                         >
                           <FaWhatsapp size={30}></FaWhatsapp>
                           Quero um projeto de branding 
