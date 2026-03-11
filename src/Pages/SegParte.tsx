@@ -911,7 +911,6 @@ useEffect(() => {
                           }
                         }}
                       >
-                        <FaWhatsapp size={30}></FaWhatsapp>
                           Começar meu projeto <FaWhatsapp size={20}></FaWhatsapp>
                       </a>
                   </div>  

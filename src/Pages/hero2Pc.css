@@ -62,7 +62,7 @@
 .button {
   position: relative;
   padding: 20px;
-  background: #000;
+  background: #006b29;
   border-radius: 16px;
   color: white;
 }
@@ -73,7 +73,7 @@
   position: absolute;
   inset: 0;
   padding: 2px; /* espessura da borda */
-  background: linear-gradient(90deg, #7a52da, #2909b9);
+  background: linear-gradient(90deg, #006b39);
   border-radius: 16px;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
