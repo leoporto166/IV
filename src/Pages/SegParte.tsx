@@ -119,9 +119,9 @@ useEffect(() => {
         
                 <div className="texto flex flex-col justify-center items-center">
                 <img src={Logo} alt="Logo Marca" className=" mt-[-210px] w-60" />
-                  <h2 className="neliusR mt-[-80px] text-[20px]">Design estratégico  para marcas<h2 className="nelius text-[20px]">que querem crescer.</h2></h2>
+                  <h2 className="neliusR mt-[-80px] text-[20px]">Transformamos marcas comuns <h2 className="nelius text-[20px]">em marcas com presença.</h2></h2>
 
-                  <p className="luf text-sm">Criamos identidades visuais preparadas <br /> para escalar e se <span className="luf font-extrabold">tornar referência.</span></p>
+                  <p className="luf text-sm">Identidade visual estratégica para negócios que querem parecer maiores mais profissionais e <span className="luf font-extrabold">mais valorizados.</span></p>
 
                 </div>
             </section>
@@ -870,9 +870,9 @@ useEffect(() => {
         
                 <div className="texto flex flex-col justify-center items-center">
                 <img src={Logo} alt="Logo Marca" className=" mt-[-210px] w-60" />
-                  <h2 className="neliusR mt-[-80px] text-[25px]">Design estratégico  para marcas <h2 className="nelius text-[25px]">que querem crescer.</h2></h2>
+                  <h2 className="neliusR mt-[-80px] text-[25px]">Transformamos marcas comuns em <h2 className="nelius text-[25px]">marcas com presença.</h2></h2>
 
-                  <p className="luf text-md mt-1">Criamos identidades visuais preparadas <br /> para escalar e se <span className="luf font-extrabold">tornar referência.</span></p>
+                  <p className="luf text-md mt-1">Identidade visual estratégica para negócios que querem parecer maiores<br /> mais profissionais e <span className="luf font-extrabold">mais valorizados.</span></p>
 
                 </div>
               </section>
