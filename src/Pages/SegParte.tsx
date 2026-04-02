@@ -107,7 +107,7 @@ const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   });
 
   setTimeout(() => {
-    window.open('https://wa.me/5562999999999', '_blank');
+    window.open('https://wa.me/62982612708', '_blank');
   }, 300);
 };
 
@@ -629,9 +629,9 @@ const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
                     viewport={{ once: true }}
                     onViewportEnter={() => setStart(true)}
                   >
-                    <div className="flex flex-col w-12/12 text-white justify-center items-center ">
-                    <div className='pl-4'>
-                      <h2 className='text-6xl font-medium nelius text-start mr-3'>Vamos criar uma marca com estrategia</h2>
+                    <div className="flex flex-col w-12/12 text-white justify-center items-center">
+                    <div className='pl-4 flex justify-center items-center flex-col '>
+                      <h2 className='text-6xl font-medium nelius mr-3 text-center'>Vamos criar uma marca com estrategia</h2>
                       <h2 className='luf text-2xl text-center font-semibold'>
                         Sua marca merece mais do que uma logo bonito.
                       </h2>
